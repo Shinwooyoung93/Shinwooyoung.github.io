@@ -20,7 +20,7 @@ plainwhite:
   name: KU, shinwooyoung
   tagline: PhD program in KU
   date_format: "%b %-d, %Y"
-  sitemap: false # set to true to generate sitemap.xml content
+  sitemap: true # set to true to generate sitemap.xml content
 
   # generate social links in footer
   # social_links:
