@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Research format"
-date:   2019-03-23
+date:   2019-07-06
 use_math: true
 tags:
  - python
