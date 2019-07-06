@@ -78,7 +78,7 @@ for i in range(10):
 #plt.savefig('Report_format1.png', dpi=300)
 ```
 
-![]("/_images/Report_format/Report_format1.png")
+![](/_images/Report_format/Report_format1.png)
 
 ```python
 from sklearn.datasets import make_circles
@@ -93,7 +93,7 @@ plt.show()
 #plt.savefig('Report_format2.png', dpi=300)
 ```
 
-![]("/_images/Report_format/Report_format2.png")
+![](/_images/Report_format/Report_format2.png)
 
 ### 3-b. Simulation
 
