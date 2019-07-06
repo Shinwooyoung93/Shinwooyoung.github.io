@@ -78,7 +78,7 @@ for i in range(10):
 #plt.savefig('Report_format1.png', dpi=300)
 ```
 
-![Mnist data](/_images/Report_format/Report_format1.png)
+![Mnist data](./_images/Report_format/Report_format1.png)
 
 ```python
 from sklearn.datasets import make_circles
@@ -88,12 +88,11 @@ plt.scatter(X[y == 0, 0], X[y == 0, 1], color='red', marker='^', alpha=0.5)
 plt.scatter(X[y == 1, 0], X[y == 1, 1], color='blue', marker='o', alpha=0.5)
 plt.tight_layout()
 plt.title('True plot', size = 15)
-plt.savefig('1.png', dpi = 300)
 plt.show()
 #plt.savefig('Report_format2.png', dpi=300)
 ```
 
-![Circle data](/_images/Report_format/Report_format2.png)
+![Circle data](./_images/Report_format/Report_format2.png)
 
 ### 3-b. Simulation
 
