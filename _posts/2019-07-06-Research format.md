@@ -78,7 +78,7 @@ for i in range(10):
 #plt.savefig('Report_format1.png', dpi=300)
 ```
 
-![](/_images/Report_format/Report_format1.png)
+![Mnist data](/_images/Report_format/Report_format1.png){:width="70"}
 
 ```python
 from sklearn.datasets import make_circles
