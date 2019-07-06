@@ -93,7 +93,7 @@ plt.show()
 #plt.savefig('Report_format2.png', dpi=300)
 ```
 
-![](/_images/Report_format/Report_format2.png)
+![Circle data](/_images/Report_format/Report_format2.png)
 
 ### 3-b. Simulation
 
