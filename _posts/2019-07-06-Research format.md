@@ -78,6 +78,8 @@ for i in range(10):
 #plt.savefig('Report_format1.png', dpi=300)
 ```
 
+![텍스트](다운로드/Report_format1.png)
+
 ```python
 from sklearn.datasets import make_circles
 
