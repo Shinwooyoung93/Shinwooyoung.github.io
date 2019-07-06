@@ -93,7 +93,7 @@ plt.show()
 #plt.savefig('Report_format2.png', dpi=300)
 ```
 
-<center><img src="/_images/Report_format/Report_format2.png" width="400" height="400"></center>
+</center><img src="/_images/Report_format/Report_format2.png" width="400" height="400"></center>
 
 ### 3-b. Simulation
 
