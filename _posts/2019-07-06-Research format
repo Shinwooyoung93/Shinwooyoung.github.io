@@ -4,14 +4,11 @@ title:  "Research format"
 date:   2019-03-23
 use_math: true
 tags:
- - python
+ -python
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 
-```r
-rm(list = ls())
-a <- 1
-print(a)
-```
+# [Title]
 
-$\frac{1}{2}$
+## 1. Introduction
+
+
