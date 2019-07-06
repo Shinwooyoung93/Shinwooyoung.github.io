@@ -78,7 +78,7 @@ for i in range(10):
 #plt.savefig('Report_format1.png', dpi=300)
 ```
 
-<img src="/assets/Report_format/Report_format1.png" width="500" height="500">
+<center><img src="/assets/Report_format/Report_format1.png" width="500" height="500"></center>
 
 ```python
 from sklearn.datasets import make_circles
