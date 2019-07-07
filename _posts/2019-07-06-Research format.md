@@ -5,6 +5,7 @@ date:   2019-07-06
 use_math: true
 tags:
  - python
+ - korean
 ---
 
 # [Title]
