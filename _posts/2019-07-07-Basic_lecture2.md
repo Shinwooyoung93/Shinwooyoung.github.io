@@ -9,21 +9,11 @@ tags:
  - Lecture
 ---
 
----
-title: "Lecture2 - 프로그래밍 기초"
-author: "KU, Shin wooyoung"
-date: "2019-07"
-output:
-  html_document:
-    latex_engine: xelatex
-mainfont: NanumGothic
----
-
 # 1. R의 기본기능
 
 ## 1-1. R의 기초기능(수학연산)
 
-```{r}
+```r
 1+2
 ```
 
