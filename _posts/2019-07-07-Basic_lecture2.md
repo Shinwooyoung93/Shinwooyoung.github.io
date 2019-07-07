@@ -219,7 +219,7 @@ sum(x*y)
 ?cbind # equal to help(cbind)
 ```
 
-<center><img src="/assets/Basic_lecture2/1.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture2/1.PNG" width="500" height="400"></center>
 
 ```r
 z <- cbind(x, y)
