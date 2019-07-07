@@ -116,7 +116,7 @@ is.character(y)
 
 데이터의 형태가 위에 언급한 것에 없을 수 있다. 로그분포를 생각해보자.
 
-<center><img src="/assets/Basic_lecture3/2.png" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture3/2.png" width="500" height="400"></center>
 
 로그분포의 정의역은 0보다 큰값으로 정의된다. 만약 $\log(0)$ 혹은 $\log(-1)$을 계산해보자.
 ```r
