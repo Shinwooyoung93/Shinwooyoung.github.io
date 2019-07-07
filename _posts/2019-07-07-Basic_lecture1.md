@@ -123,7 +123,7 @@ https://www.rstudio.com 에서 설치
 
 ### 2-2-3. R-studio
 
-<center><img src="/assets/Basic_lecture1/17.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/17.png" width="500" height="500"></center>
 
 - 편집기 : R 명령어를 입력하는 창
 
