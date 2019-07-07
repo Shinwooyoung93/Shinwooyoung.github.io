@@ -70,7 +70,7 @@ tags:
     + 자료객체 중 가장 자유로운 구조
     + 후에 배우게 될 함수의 생성에서 필수적인 요소
     
-<center><img src="/assets/Basic_lecture3/1.png" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture3/1.png" width="500" height="400"></center>
 
 자료 객체의 형식을 변환하는 함수는 다음과 같다.
 
