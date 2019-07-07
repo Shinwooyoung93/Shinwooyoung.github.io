@@ -9,16 +9,6 @@ tags:
  - Lecture
 ---
 
----
-title: "Lecture3 - 데이터 구조"
-author: "KU, Shin wooyoung"
-date: "2019-07"
-output:
-  html_document:
-    latex_engine: xelatex
-mainfont: NanumGothic
----
-
 # 1. 데이터 구조
 
 ## 1-1. R과 오브젝트
