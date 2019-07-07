@@ -65,27 +65,27 @@ tags:
 
 http://cran.r-project.org/ 에서 다운로드
 
-<center><img src="/assets/Basic_lecture1/1.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/1.PNG" width="500" height="400"></center>
 
 base를 선택
 
-<center><img src="/assets/Basic_lecture1/2.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/2.PNG" width="500" height="400"></center>
 
-<center><img src="/assets/Basic_lecture1/3.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/3.PNG" width="500" height="400"></center>
 
-<center><img src="/assets/Basic_lecture1/4.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/4.PNG" width="400" height="300"></center>
 
-<center><img src="/assets/Basic_lecture1/5.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/5.PNG" width="500" height="400"></center>
 
-<center><img src="/assets/Basic_lecture1/6.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/6.PNG" width="500" height="400"></center>
 
-<center><img src="/assets/Basic_lecture1/7.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/7.PNG" width="500" height="400"></center>
 
-<center><img src="/assets/Basic_lecture1/8.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/8.PNG" width="500" height="400"></center>
 
-<center><img src="/assets/Basic_lecture1/9.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/9.PNG" width="500" height="400"></center>
 
-<center><img src="/assets/Basic_lecture1/10.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/10.PNG" width="500" height="400"></center>
 
 ## 2-2. R-studio
 
@@ -109,21 +109,21 @@ base를 선택
 
 https://www.rstudio.com 에서 설치
 
-<center><img src="/assets/Basic_lecture1/11.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/11.PNG" width="500" height="400"></center>
 
-<center><img src="/assets/Basic_lecture1/12.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/12.PNG" width="500" height="400"></center>
 
-<center><img src="/assets/Basic_lecture1/13.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/13.PNG" width="500" height="400"></center>
 
-<center><img src="/assets/Basic_lecture1/14.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/14.PNG" width="500" height="400"></center>
 
-<center><img src="/assets/Basic_lecture1/15.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/15.PNG" width="500" height="400"></center>
 
-<center><img src="/assets/Basic_lecture1/16.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/16.PNG" width="500" height="400"></center>
 
 ### 2-2-3. R-studio
 
-<center><img src="/assets/Basic_lecture1/17.png" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/17.png" width="500" height="400"></center>
 
 - 편집기 : R 명령어를 입력하는 창
 
@@ -133,7 +133,7 @@ https://www.rstudio.com 에서 설치
 
 **Q. 변수 $x$에 1을 할당하고 싶다.**
 
-<center><img src="/assets/Basic_lecture1/18.PNG" width="500" height="500"></center>
+<center><img src="/assets/Basic_lecture1/18.PNG" width="500" height="400"></center>
 
 1. 편집기에 $x \leftarrow 1$명령어를 입력하고 실행한다
     + 실행방법은 원하는 영역을 선택하고 $Run$버튼을 누르거나 Ctrl + Enter를 이용
