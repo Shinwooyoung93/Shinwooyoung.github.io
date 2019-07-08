@@ -39,8 +39,8 @@ tags:
     
     + 오존농도 패턴 군집화
     
-<center><img src="/assets/Application_lecture4/2.png"></center>
-<center><img src="/assets/Application_lecture4/3.png"></center>
+<center><img src="/assets/Application_lecture4/2.jpg"></center>
+<center><img src="/assets/Application_lecture4/3.jpg"></center>
 
 ## 1-2. Simple example
 
