@@ -448,7 +448,7 @@ plot(iris[,-c(3,4,5)], col = pal[iris[,5]], main = "Multiple Logistic sepal.leng
 fit <- multinom(Species ~., data = iris[,c(1, 2, 5)])
 summary(fit)
 ```
-<center><img src="/assets/Basic_lecture8/15.png"></center>
+<center><img src="/assets/Basic_lecture8/15_1.png"></center>
 <center><img src="/assets/Basic_lecture8/16.PNG"></center>
 
 위에서 언급한 대로 회귀식이 2개가 생긴다.
@@ -467,11 +467,11 @@ summ <- summary(fit)
 pt(abs(summ$coefficients / summ$standard.errors), df=1, lower=FALSE)
 ```
 
-<center><img src="/assets/Basic_lecture8/17.PNG"></center>
+<center><img src="/assets/Basic_lecture8/17.png"></center>
 
 그다지 유의하지 않음을 알 수 있으며 이를 바탕으로 정확도와 분류 그래프를 그려보자.
 
-```{r, out.width = "70%", fig.align='center', warning=F}
+```r
 rm(list = ls())
 library(nnet)
 set.seed(1)
