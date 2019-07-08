@@ -308,9 +308,9 @@ output: html_document
 ---
 ```
 
-```r
+` ```r
 ` ```{r, echo = T, out.width = '70%', fig.align='center'}
-(your script)
+` (your script)
 ` ```
 ```
 
