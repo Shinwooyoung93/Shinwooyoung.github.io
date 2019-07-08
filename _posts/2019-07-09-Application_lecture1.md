@@ -50,12 +50,14 @@ tags:
 
 <center><img src="/assets/Application_lecture1/3.PNG"></center>
 
-`---` <br/>
-`title: "Untitled"` <br/>
-`author: "KU, Shin wooyoung"` <br/>
-`date: "2019년 6월 2일"` <br/>
-`output: html_document` <br/>
-`---`
+```r
+---
+title: "Untitled"
+author: "KU, Shin wooyoung"
+date: "2019년 6월 2일"
+output: html_document
+---
+```
 
 이 부분으로 `R-markdown`의 형식을 구성한다.
 
@@ -116,7 +118,7 @@ tags:
 
 주의해야할 점은 일반 텍스트와 소제목의 줄간격을 없이 입력하게 되면 문제가 발생한다
 
-`안녕하세요`<br/>
+`안녕하세요`
 ### 3rd Level Header
 
 따라서 간격을 주어서 입력해야 함을 주의하자.
@@ -155,11 +157,13 @@ tags:
 
 `R-code`를 입력하고 싶다면, 다음의 형식을 사용하여야한다.
 
-` ```{r} ` <br/>
-` rm(list = ls())` <br/>
-` data(cars)` <br/>
-` summary(cars)` <br/>
-` ``` ` 
+```{r}
+```{r}
+rm(list = ls())
+data(cars)
+summary(cars)
+` ```
+```
 
 * `r` : 내가 입력할 언어가 `R`이라는 것을 명시해주는 부분
 
@@ -179,12 +183,13 @@ summary(cars)
 ```
 
 그러나 나의 코드를 보여주고 싶지 않을 상황도 존재한다. 그럴 경우에는 다음의 코드를 사용한다.
-
-` ```{r, echo = F} ` <br/>
-` rm(list = ls())` <br/>
-` data(cars)` <br/>
-` summary(cars)` <br/>
-` ``` ` 
+```r
+```{r, echo = F}
+rm(list = ls())
+data(cars)
+summary(cars)
+` ```
+```
 
 * `echo` : 코드의 출력을 담당하는 부분
 
@@ -202,9 +207,11 @@ summary(cars)
 
 그래프를 입력하거나, 외부 사진을 넣는 방법은 아래의 코드를 활용한다.
 
-` ```{r, out.width = '70%', fig.align='center'} ` <br/>
-` knitr::include_graphics("iris.png")` <br/>
-` ``` ` 
+```r
+```{r, out.width = '70%', fig.align='center'}
+knitr::include_graphics("iris.png")
+` ```
+```
 
 * `out.width` : 출력물의 크기를 조정하는 부분
 
@@ -216,10 +223,11 @@ summary(cars)
 
 또한 `R-code`를 입력하여 그래프를 그릴 수도 있다.
 
-` ```{r, echo=FALSE}` <br/>
-` plot(pressure)` <br/>
-` ``` ` <br/>
-
+```r
+```{r, echo=FALSE}
+plot(pressure)
+` ```
+```
 ```r
 data(pressure)
 plot(pressure, main = "pressure data plot") 
@@ -243,7 +251,7 @@ plot(pressure, main = "pressure data plot")
 
 이며 데이터의 형태를 먼저 살펴보자.
 
-```{r}
+```r
 data(mtcars)
 str(mtcars)
 ```
@@ -491,17 +499,19 @@ contour(grid1, grid2, z, add = T, drawlabels = F, lwd = 1)
 # 3. Question
 
 다음의 형식을 이용해 `mtcars`데이터와 `iris`데이터를 이용해 분석 보고서를 완성하시오.
-
-`---` <br/>
-`title: "Report via example data"` <br/>
-`author: "SSWU, Your Name"` <br/>
-`date: \today` <br/>
-`output: html_document` <br/>
-`---`
-
-` ```{r, echo = T, out.width = '70%', fig.align='center'} ` <br/>
-` (your script)` <br/>
-` ``` ` 
+```r
+---
+title: "Report via example data"
+author: "SSWU, Your Name"
+date: \today
+output: html_document
+---
+```
+```r
+```{r, echo = T, out.width = '70%', fig.align='center'}
+(your script)
+` ```
+```
 
 ### 1. Regression
 #### 1-1. See mtcars data
