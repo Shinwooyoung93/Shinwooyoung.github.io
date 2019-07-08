@@ -9,6 +9,8 @@ tags:
  - Lecture
 ---
 
+# Final Report
+
 ```r
 ---
 title: "Final report via crime data"
@@ -17,6 +19,7 @@ date: \today
 output: html_document
 ---
 ```
+
 ```r
 ` ```{r, echo = T, out.width = '70%', fig.align='center'}
 ` (your script)
