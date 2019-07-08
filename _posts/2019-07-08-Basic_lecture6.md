@@ -267,7 +267,7 @@ legend("topleft", legend = c("setosa", "versicolor"), cex = 0.8, col = c("red", 
 segments(x0 = 4, y0 = 2, x1 = 7.5, y1 = 5, col = "green", lty = 2, lwd = 2)
 ```
 
-<center><img src="/assets/Basic_lecture6/12.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/13.png" width="500" height="400"></center>
 
 ### 1-3-3. Box-plot
 
@@ -287,14 +287,14 @@ segments(x0 = 4, y0 = 2, x1 = 7.5, y1 = 5, col = "green", lty = 2, lwd = 2)
 boxplot(iris$Sepal.Length, main = "Sepal length boxplot")
 ```
 
-<center><img src="/assets/Basic_lecture6/13.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/14.png" width="500" height="400"></center>
 
 다음은 독립변수 ~ 종속변수 형태로 살펴보자.
 ```r
 boxplot(iris$Sepal.Length ~ iris$Species, main = "Sepal length boxplot")
 ```
 
-<center><img src="/assets/Basic_lecture6/14.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/15.png" width="500" height="400"></center>
 
 # 2. 3차원 그래프
 
@@ -336,7 +336,7 @@ persp(x = x, y = y, z = z, phi = 30, theta = 0, expand = 0.5, main = "phi = 30, 
 persp(x = x, y = y, z = z, phi = 30, theta = 30, expand = 0.5, main = "phi = 30, theta = 30")
 ```
 
-<center><img src="/assets/Basic_lecture6/15.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/16.png" width="500" height="400"></center>
 
 그러나 위의 3차원 그래프는 원하는 값의 위치를 알기 쉽지는 않다. 
 
