@@ -168,8 +168,15 @@ rm(list = ls())
 data(cars) 
 summary(cars) 
 ```
-
-<center><img src="/assets/Application_lecture1/7.PNG"></center>
+```r
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+```
 
 그러나 나의 코드를 보여주고 싶지 않을 상황도 존재한다. 그럴 경우에는 다음의 코드를 사용한다.
 
@@ -181,7 +188,15 @@ summary(cars)
 
 * `echo` : 코드의 출력을 담당하는 부분
 
-<center><img src="/assets/Application_lecture1/7.PNG"></center>
+```r
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+```
 
 ### 1-2-4. Input graph
 
@@ -232,6 +247,20 @@ plot(pressure, main = "pressure data plot")
 data(mtcars)
 str(mtcars)
 ```
+```r
+## 'data.frame':    32 obs. of  11 variables:
+##  $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
+##  $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
+##  $ disp: num  160 160 108 258 360 ...
+##  $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...
+##  $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...
+##  $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...
+##  $ qsec: num  16.5 17 18.6 19.4 17 ...
+##  $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...
+##  $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
+##  $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
+##  $ carb: num  4 4 1 1 2 1 4 2 2 4 ...
+```
 
 $Y$(종속변수)는 `mpg`이며 그 외의 변수들로 종속변수를 설명해보자.
 
@@ -239,8 +268,35 @@ $Y$(종속변수)는 `mpg`이며 그 외의 변수들로 종속변수를 설명�
 fit <- lm(mpg ~ ., data = mtcars)
 summary(fit)
 ```
-
-<center><img src="/assets/Application_lecture1/9.PNG"></center>
+```r
+## 
+## Call:
+## lm(formula = mpg ~ ., data = mtcars)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.4506 -1.6044 -0.1196  1.2193  4.6271 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)  
+## (Intercept) 12.30337   18.71788   0.657   0.5181  
+## cyl         -0.11144    1.04502  -0.107   0.9161  
+## disp         0.01334    0.01786   0.747   0.4635  
+## hp          -0.02148    0.02177  -0.987   0.3350  
+## drat         0.78711    1.63537   0.481   0.6353  
+## wt          -3.71530    1.89441  -1.961   0.0633 .
+## qsec         0.82104    0.73084   1.123   0.2739  
+## vs           0.31776    2.10451   0.151   0.8814  
+## am           2.52023    2.05665   1.225   0.2340  
+## gear         0.65541    1.49326   0.439   0.6652  
+## carb        -0.19942    0.82875  -0.241   0.8122  
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 2.65 on 21 degrees of freedom
+## Multiple R-squared:  0.869,  Adjusted R-squared:  0.8066 
+## F-statistic: 13.93 on 10 and 21 DF,  p-value: 3.793e-07
+```
 
 이며 모델의 성능을 평가할 수 있는 척도 2가지
 
@@ -255,7 +311,28 @@ fullmodel <- lm(mpg~., data = mtcars)
 step.models <- step(fullmodel, direction = "backward", trace = F)
 summary(step.models)
 ```
-<center><img src="/assets/Application_lecture1/10.PNG"></center>
+```r
+## 
+## Call:
+## lm(formula = mpg ~ wt + qsec + am, data = mtcars)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.4811 -1.5555 -0.7257  1.4110  4.6610 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)   9.6178     6.9596   1.382 0.177915    
+## wt           -3.9165     0.7112  -5.507 6.95e-06 ***
+## qsec          1.2259     0.2887   4.247 0.000216 ***
+## am            2.9358     1.4109   2.081 0.046716 *  
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 2.459 on 28 degrees of freedom
+## Multiple R-squared:  0.8497, Adjusted R-squared:  0.8336 
+## F-statistic: 52.75 on 3 and 28 DF,  p-value: 1.21e-11
+```
 
 이며 모델의 성능을 평가할 수 있는 척도 2가지
 
@@ -286,13 +363,49 @@ data(iris)
 pal <- c(2, 3, 4)
 plot(iris[,-c(3,4,5)], col = pal[iris[,5]], main = "Multiple Logistic sepal.length vs sepal.width", 
      xlab = "Sepal.Length", ylab = "Sepal.Width")
-fit <- multinom(Species ~., data = iris[,c(1, 2, 5)])
-summary(fit)
 ```
 
 <center><img src="/assets/Application_lecture1/12.png"></center>
 
-<center><img src="/assets/Application_lecture1/11.PNG"></center>
+```r
+fit <- multinom(Species ~., data = iris[,c(1, 2, 5)])
+```
+```r
+## # weights:  12 (6 variable)
+## initial  value 164.791843 
+## iter  10 value 62.715967
+## iter  20 value 59.808291
+## iter  30 value 55.445984
+## iter  40 value 55.375704
+## iter  50 value 55.346472
+## iter  60 value 55.301707
+## iter  70 value 55.253532
+## iter  80 value 55.243230
+## iter  90 value 55.230241
+## iter 100 value 55.212479
+## final  value 55.212479 
+## stopped after 100 iterations
+```
+```r
+summary(fit)
+```
+```r
+## Call:
+## multinom(formula = Species ~ ., data = iris[, c(1, 2, 5)])
+## 
+## Coefficients:
+##            (Intercept) Sepal.Length Sepal.Width
+## versicolor   -92.09924     40.40326   -40.58755
+## virginica   -105.10096     42.30094   -40.18799
+## 
+## Std. Errors:
+##            (Intercept) Sepal.Length Sepal.Width
+## versicolor    26.27831     9.142717    27.77772
+## virginica     26.37025     9.131119    27.78875
+## 
+## Residual Deviance: 110.425 
+## AIC: 122.425
+```
 
 범주의 갯수가 3개이므로 2개의 분류 직선이 만들어진다.
 $$
@@ -313,16 +426,53 @@ index <- sample(n, 0.7*n, replace = F)
 train.data<- iris[index,c(1, 2, 5)]
 test.data <- iris[-index,c(1, 2, 5)]
 dim(train.data)
+```
+```r
+## [1] 105   3
+```
+```r
 dim(test.data)
-
+```
+```r
+## [1] 45  3
+```
+```r
 fit <- multinom(Species ~., data = train.data)
+```
+```r
+## # weights:  12 (6 variable)
+## initial  value 115.354290 
+## iter  10 value 44.002559
+## iter  20 value 41.701929
+## iter  30 value 37.449424
+## iter  40 value 37.292331
+## iter  50 value 37.271378
+## iter  60 value 37.253756
+## iter  70 value 37.236630
+## iter  80 value 37.225070
+## iter  90 value 37.219598
+## iter 100 value 37.212447
+## final  value 37.212447 
+## stopped after 100 iterations
+```
+```r
 pred<- predict(fit, new = test.data, type = "class")
 accuracy <- mean(test.data$Species == pred)
 accuracy
-
+```
+```r
+## [1] 0.8
+```
+```r
 r <- sapply(iris[,1:2], range, na.rm = TRUE)
 r
-
+```
+```r
+##      Sepal.Length Sepal.Width
+## [1,]          4.3         2.0
+## [2,]          7.9         4.4
+```
+```r
 grid1 <- seq(r[1,1], r[2,1], length.out = 100)
 grid2 <- seq(r[1,2], r[2,2], length.out = 100)
 grid <- expand.grid(Sepal.Length = grid1, Sepal.Width = grid2)
