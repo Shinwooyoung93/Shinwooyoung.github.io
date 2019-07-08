@@ -361,3 +361,20 @@ contour(grid1, grid2, z, add = T, drawlabels = F, lwd = 1)
 #### 2-2. Modeling
 #### 2-3. Plotting
 ### 3. Conclusion
+
+```r
+## # weights:  12 (6 variable)
+## initial  value 115.354290 
+## iter  10 value 44.002559
+## iter  20 value 41.701929
+## iter  30 value 37.449424
+## iter  40 value 37.292331
+## iter  50 value 37.271378
+## iter  60 value 37.253756
+## iter  70 value 37.236630
+## iter  80 value 37.225070
+## iter  90 value 37.219598
+## iter 100 value 37.212447
+## final  value 37.212447 
+## stopped after 100 iterations
+```
