@@ -70,7 +70,7 @@ tags:
     + 자료객체 중 가장 자유로운 구조
     + 후에 배우게 될 함수의 생성에서 필수적인 요소
     
-<center><img src="/assets/Basic_lecture3/1.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture3/1.png"></center>
 
 자료 객체의 형식을 변환하는 함수는 다음과 같다.
 
@@ -116,7 +116,7 @@ is.character(y)
 
 데이터의 형태가 위에 언급한 것에 없을 수 있다. 로그분포를 생각해보자.
 
-<center><img src="/assets/Basic_lecture3/2.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture3/2.png"></center>
 
 로그분포의 정의역은 0보다 큰값으로 정의된다. 만약 $\log(0)$ 혹은 $\log(-1)$을 계산해보자.
 ```r
