@@ -511,7 +511,7 @@ output: html_document
 ```r
 ```{r, echo = T, out.width = '70%', fig.align='center'}
 (your script)
-` ````
+$\frac{1}{2}$
 ```
 
 ### 1. Regression
