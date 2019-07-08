@@ -169,6 +169,8 @@ data(cars)
 summary(cars) 
 ```
 
+<center><img src="/assets/Application_lecture1/7.PNG"></center>
+
 그러나 나의 코드를 보여주고 싶지 않을 상황도 존재한다. 그럴 경우에는 다음의 코드를 사용한다.
 
 ` ```{r, echo = F} ` <br/>
@@ -179,11 +181,7 @@ summary(cars)
 
 * `echo` : 코드의 출력을 담당하는 부분
 
-```r
-rm(list = ls()) 
-data(cars) 
-summary(cars) 
-```
+<center><img src="/assets/Application_lecture1/7.PNG"></center>
 
 ### 1-2-4. Input graph
 
@@ -207,10 +205,12 @@ summary(cars)
 ` plot(pressure)` <br/>
 ` ``` ` <br/>
 
-```{r, echo=FALSE, out.width='50%', fig.align='left'}
+```r
 data(pressure)
 plot(pressure, main = "pressure data plot") 
 ```
+
+<center><img src="/assets/Application_lecture1/8.png"></center>
 
 # 2. Exercise data
 
@@ -235,10 +235,12 @@ str(mtcars)
 
 $Y$(종속변수)는 `mpg`이며 그 외의 변수들로 종속변수를 설명해보자.
 
-```{r}
+```r
 fit <- lm(mpg ~ ., data = mtcars)
 summary(fit)
 ```
+
+<center><img src="/assets/Application_lecture1/9.PNG"></center>
 
 이며 모델의 성능을 평가할 수 있는 척도 2가지
 
@@ -248,11 +250,12 @@ summary(fit)
 
 많은 변수들을 사용하지 않고 최소한의 변수로 모델링을 진행하는 것이 효율적이다. 
 
-```{r, out.width="70%", fig.align='center'}
+```r
 fullmodel <- lm(mpg~., data = mtcars)
 step.models <- step(fullmodel, direction = "backward", trace = F)
 summary(step.models)
 ```
+<center><img src="/assets/Application_lecture1/10.PNG"></center>
 
 이며 모델의 성능을 평가할 수 있는 척도 2가지
 
@@ -274,7 +277,7 @@ $Y$(종속변수)의 형태가 범주형인 데이터에 대해서 실시하는 
 
 이며 데이터를 먼저 살펴보자.
 
-```{r, out.width = "70%", fig.align='center', warning=F}
+```r
 rm(list = ls())
 #install.packages("nnet")
 library(nnet)
@@ -287,6 +290,10 @@ fit <- multinom(Species ~., data = iris[,c(1, 2, 5)])
 summary(fit)
 ```
 
+<center><img src="/assets/Application_lecture1/12.png"></center>
+
+<center><img src="/assets/Application_lecture1/11.PNG"></center>
+
 범주의 갯수가 3개이므로 2개의 분류 직선이 만들어진다.
 $$
 \begin{split}
@@ -296,7 +303,7 @@ $$
 $$
 
 이며 이를 바탕으로 코딩을 실시한다.
-```{r, out.width = "70%", fig.align='center', warning=F}
+```r
 rm(list = ls())
 library(nnet)
 set.seed(1)
@@ -328,6 +335,8 @@ plot(iris[,-c(3,4,5)], col = pal[iris[,5]], main = "Multiple Logistic",
 points(grid, col = pal[p], pch = ".")
 contour(grid1, grid2, z, add = T, drawlabels = F, lwd = 1)
 ```
+
+<center><img src="/assets/Application_lecture1/13.png"></center>
 
 # 3. Question
 
