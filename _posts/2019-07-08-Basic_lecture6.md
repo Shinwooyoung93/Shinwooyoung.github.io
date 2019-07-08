@@ -84,7 +84,7 @@ rbind("범주" = label,
 barplot(freq, main = "막대그래프", names.arg = label)
 ```
 
-<center><img src="/assets/Basic_lecture6/2.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/2.png"></center>
 
 여기에 막대그래프의 색을 추가해보자. 
 
