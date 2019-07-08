@@ -236,14 +236,12 @@ head(new_iris)
 dim(new_iris)
 ```
 
-<center><img src="/assets/Basic_lecture7/15.png" width="500" height="400"></center>
-
 `melt`는 4개의 변수를 1개의 변수로 만들어주는 역할을 한다. 
 ```r
 ggplot(new_iris, aes(x = Species, y = value, fill = variable)) + geom_bar(stat = "identity")
 ```
 
-<center><img src="/assets/Basic_lecture7/16.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/15.png" width="500" height="400"></center>
 
 또한 변수가 합쳐진 그래프가 아니라 따로 떨어진 형태로 만들고 싶을 땐 `position=“dodge”`를 사용한다.
 ```r
@@ -251,7 +249,7 @@ ggplot(new_iris, aes(Species, value, fill = variable)) +
   geom_bar(stat = "identity", position = "dodge")
 ```
 
-<center><img src="/assets/Basic_lecture7/17.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/16.png" width="500" height="400"></center>
 
 ### 2-3-3. Histogram
 
@@ -271,9 +269,9 @@ h + geom_histogram(color = "black", fill = "steelblue")
 h + geom_histogram(binwidth= 0.5, color = "white", fill = "tomato")
 ```
 
-<center><img src="/assets/Basic_lecture7/18.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/17.png" width="500" height="400"></center>
 
-<center><img src="/assets/Basic_lecture7/19.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/18.png" width="500" height="400"></center>
 
 ### 2-3-3. Density plot
 
@@ -282,21 +280,21 @@ Density curve를 그리기 위해서는 `geom_density()`를 이용한다.
 ggplot(iris, aes(x = Sepal.Width)) + geom_density()
 ```
 
-<center><img src="/assets/Basic_lecture7/20.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/19.png" width="500" height="400"></center>
 
 `fill` 옵션을 통해 내부를 색으로 채우고, `alpha` 옵션은 투명도를 나타낸다.
 ```r
 ggplot(iris, aes(x = Sepal.Width)) + geom_density(fill = "blue", alpha = 0.5)
 ```
 
-<center><img src="/assets/Basic_lecture7/21.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/20.png" width="500" height="400"></center>
 
 위의 Histogram과 Density plot를 함께 그린 시각화는 아래와 같다.
 ```r
 h + geom_histogram(binwidth=0.2, color = "black", fill = "tomato", aes(y=..density..)) + geom_density(fill = "blue", alpha = 0.3)
 ```
 
-<center><img src="/assets/Basic_lecture7/22.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/21.png" width="500" height="400"></center>
 
 축의 이름을 설정하는 것은 다음과 같다.
 ```r
@@ -306,9 +304,9 @@ h + geom_histogram(binwidth=0.2, colour = "black", fill = "tomato", aes(y=..dens
 h + geom_histogram(binwidth=0.2, colour = "black", fill = "tomato", aes(y=..density..)) + geom_density(fill = "blue", alpha = 0.3) + labs(x = "Sepal Width", y = "Density", title = "Histogram & Density Curve")
 ```
 
-<center><img src="/assets/Basic_lecture7/23.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/22.png" width="500" height="400"></center>
 
-<center><img src="/assets/Basic_lecture7/24.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/23.png" width="500" height="400"></center>
 
 ### 2-3-4. 3차원 그래프
 
@@ -320,7 +318,7 @@ library(plotly)
 plot_ly(data = iris, x = ~Petal.Length, y = ~Petal.Width, z = ~Sepal.Length, type = "scatter3d", mode = "markers", color = ~Species)
 ```
 
-<center><img src="/assets/Basic_lecture7/25.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/24.png" width="500" height="400"></center>
 
 ### 2-3-5. 좀 더 interactive하게!
 
@@ -332,14 +330,14 @@ p <- ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) + geom_point(
 ggplotly(p)
 ```
 
-<center><img src="/assets/Basic_lecture7/26.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/25.png" width="500" height="400"></center>
 
 ```r
 q <- ggplot(iris, aes(x = Sepal.Width)) + geom_histogram(colour = "white", fill = "tomato")
 ggplotly(q)
 ```
 
-<center><img src="/assets/Basic_lecture7/27.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/26.png" width="500" height="400"></center>
 
 # 3. Question
 
@@ -347,7 +345,7 @@ ggplotly(q)
 
 ## 3-1. Question
 
-<center><img src="/assets/Basic_lecture7/28.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/27.png" width="500" height="400"></center>
 
 ## 3-2. Question
 
