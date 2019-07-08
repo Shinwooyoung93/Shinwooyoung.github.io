@@ -159,7 +159,7 @@ accuracy
 ```
 
 시각화를 진행해보도록 하자. 그러기 위해 `grid`를 정의한다.
-```{r, out.width = "70%", fig.align='center'}
+```r
 grid1 <- seq(min(iris$Sepal.Length), max(iris$Sepal.Length), length.out = 100)
 grid2 <- seq(min(iris$Sepal.Width), max(iris$Sepal.Width), length.out = 100)
 grid <- expand.grid(Sepal.Length = grid1, Sepal.Width = grid2)
@@ -170,6 +170,7 @@ p1 <- geom_point(data = z, aes(x = grid1, y = grid2, col = pred.grid), alpha = 0
 l1 <- labs(title = "Decision boundary iris data")
 p + s + p1 + l1
 ```
+
 <center><img src="/assets/Application_lecture3/2.png"></center>
 
 # 2. Apply real data
