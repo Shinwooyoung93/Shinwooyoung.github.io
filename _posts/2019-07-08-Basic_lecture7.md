@@ -345,7 +345,7 @@ ggplotly(q)
 
 ## 3-1. Question
 
-<center><img src="/assets/Basic_lecture7/27.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/27.png"></center>
 
 ## 3-2. Question
 
