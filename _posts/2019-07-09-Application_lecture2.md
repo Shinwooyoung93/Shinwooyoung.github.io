@@ -300,17 +300,18 @@ grid.arrange(p1 + h1 + d1 + l1,
 다음의 형식을 이용해 `wifi.csv`데이터와 `crime.csv`데이터를 이용해 분석 보고서를 완성하시오.
 
 ```r
-`---` <br/>
-`title: "EDA report"` <br/>
-`author: "SSWU, Your Name"` <br/>
-`date: \today` <br/>
-`output: html_document` <br/>
-`---`
+---
+title: "EDA report"
+author: "SSWU, Your Name"
+date: \today
+output: html_document
+---
 ```
+
 ```r
-` ```{r, echo = T, out.width = '70%', fig.align='center'} ` <br/>
-` (your script)` <br/>
-` ``` ` 
+```{r, echo = T, out.width = '70%', fig.align='center'}
+(your script)
+``` 
 ```
 
 ### 1. Wifi data
