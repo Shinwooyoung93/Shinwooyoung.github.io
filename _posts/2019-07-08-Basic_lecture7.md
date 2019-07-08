@@ -34,7 +34,7 @@ tags:
 
 그 후에 다음의 결과를 확인할 수 있다.
 
-<center><img src="/assets/Basic_lecture7/0.PNG" width="400" height="350"></center>
+<center><img src="/assets/Basic_lecture7/0.PNG" width="300" height="250"></center>
 
 설치만했을 뿐 사용하겠다는 명령어는 입력하지 않았다.
 
