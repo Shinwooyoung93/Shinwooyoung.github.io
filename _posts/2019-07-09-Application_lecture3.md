@@ -215,7 +215,7 @@ index <- sample(n, 0.7*n, replace = F)
 train.data<- crime[index,]
 test.data <- crime[-index,]
 dim(train.data)
-```r
+```
 ```r
 ## [1] 9240    7
 ```
