@@ -29,7 +29,7 @@ tags:
     
     + 분류(Classification) : 사전 정의된 범주가 있는 데이터로부터 모델링을 하는 문제
     
-<center><img src="/assets/Application_lecture2/1.png"></center>
+<center><img src="/assets/Application_lecture4/1.png"></center>
 
 - 군집화의 적용사례
 
@@ -39,8 +39,8 @@ tags:
     
     + 오존농도 패턴 군집화
     
-<center><img src="/assets/Application_lecture2/2.png"></center>
-<center><img src="/assets/Application_lecture2/3.png"></center>
+<center><img src="/assets/Application_lecture4/2.png"></center>
+<center><img src="/assets/Application_lecture4/3.png"></center>
 
 ## 1-2. Simple example
 
@@ -64,7 +64,7 @@ l<- labs(title = "True plot")
 p + s + l
 ```
 
-<center><img src="/assets/Application_lecture2/5.png"></center>
+<center><img src="/assets/Application_lecture4/5.png"></center>
 
 다음의 데이터를 사용하고, `kmeans`함수를 이용해 군집화를 실시한다.
 
@@ -106,7 +106,7 @@ grid.arrange(p + s1 + l1,
              p + s2 + l2)
 ```
 
-<center><img src="/assets/Application_lecture2/6.png"></center>
+<center><img src="/assets/Application_lecture4/6.png"></center>
 
 군집화를 실시한 그래프는 위와 같으며 사전에 정의된 범주와 유사하게 나온 것을 확인할 수 있다.
 
@@ -171,7 +171,7 @@ grid.arrange(p + s1 + l1,
              p + s2 + l2)
 ```
 
-<center><img src="/assets/Application_lecture2/7.png"></center>
+<center><img src="/assets/Application_lecture4/7.png"></center>
 
 `k-means`를 통해 그려진 군집화는 실제 데이터처럼 분류를 보장할 수 있는 것은 아니다. 
 
@@ -193,7 +193,7 @@ a1 <- m %>%
 a1
 ```
 
-<center><img src="/assets/Application_lecture2/8.png"></center>
+<center><img src="/assets/Application_lecture4/8.png"></center>
 
 ```r
 a2 <- m %>% 
@@ -204,7 +204,7 @@ a2 <- m %>%
 a2
 ```
 
-<center><img src="/assets/Application_lecture2/9.png"></center>
+<center><img src="/assets/Application_lecture4/9.png"></center>
 
 `k-means`를 통해 지역간의 차이를 확인할 수 있고 `purple`, `orange`색은 서로 비슷한 지역이라고 판단한다.
 
@@ -244,7 +244,7 @@ l1 <- labs(title = "k-means with Category")
 p1 + b1 + l1
 ```
 
-<center><img src="/assets/Application_lecture2/10.png"></center>
+<center><img src="/assets/Application_lecture4/10.png"></center>
 
 `MISSING PERSON`범주에는 1번 집단이 많이 분포하며 `ROBBERY`범주에는 2번 집단이 많이 분포하는 것을 확인할 수 있다.
 
@@ -258,7 +258,7 @@ l2 <- labs(title = "Histogram dist variable with cluster")
 p2 + h2 + l2
 ```
 
-<center><img src="/assets/Application_lecture2/11.png"></center>
+<center><img src="/assets/Application_lecture4/11.png"></center>
 
 군집에 따른 수치형변수 `dist`는 차이가 존재하며 2번 군집이 오른쪽에 위치하는 것을 확인할 수 있다.
 ```r
@@ -267,7 +267,7 @@ h3 <- geom_histogram(binwidth=1, color = "black", aes(fill = cluster, y=..densit
 l3 <- labs(title = "Histogram time variable with cluster")
 p3 + h3 + l3
 ```
-<center><img src="/assets/Application_lecture2/12.png"></center>
+<center><img src="/assets/Application_lecture4/12.png"></center>
 
 군집에 따른 수치형변수 `time`는 차이가 존재하며 2번 군집이 오른쪽에 위치하는 것을 확인할 수 있다.
 
@@ -281,7 +281,7 @@ l4 <- labs(title = "DayOfWeek with cluster")
 p4 + b4 + l4
 ```
 
-<center><img src="/assets/Application_lecture2/13.png"></center>
+<center><img src="/assets/Application_lecture4/13.png"></center>
 
 군집에 따른 범주형변수 `DayOfWeek`는 차이가 존재하지 않으며 `PdDistrict`변수를 살펴보자.
 ```r
@@ -291,7 +291,7 @@ l5 <- labs(title = "PdDistrict with cluster")
 p5 + b5 + l5
 ```
 
-<center><img src="/assets/Application_lecture2/14.png"></center>
+<center><img src="/assets/Application_lecture4/14.png"></center>
 
 군집에 따른 범주형변수 `PdDistrict`는 차이가 존재하는 것으로 보이며 끝으로 그래프들을 모아서 그려보면
 ```r
@@ -302,7 +302,7 @@ grid.arrange(p2 + h2 + l2,
              p5 + b5 + l5)
 ```
 
-<center><img src="/assets/Application_lecture2/15.png"></center>
+<center><img src="/assets/Application_lecture4/15.png"></center>
 
 # 3. Question
 
