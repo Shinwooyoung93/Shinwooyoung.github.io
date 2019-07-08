@@ -9,16 +9,6 @@ tags:
  - Lecture
 ---
 
----
-title: "Lecture7 - 라이브러리 활용 및 고급 시각화"
-author: "KU, Shin wooyoung"
-date: "2019-07"
-output:
-  html_document:
-    latex_engine: xelatex
-mainfont: NanumGothic
----
-
 # 1. R 패키지
 
 - R은 기본기능만으로도 많은 작업을 수행할 수 있지만 다음의 기능들을 수행할 경우가 많음
