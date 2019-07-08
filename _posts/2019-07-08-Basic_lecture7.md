@@ -34,7 +34,7 @@ tags:
 
 그 후에 다음의 결과를 확인할 수 있다.
 
-<center><img src="/assets/Basic_lecture7/0.PNG" width="300" height="250"></center>
+<center><img src="/assets/Basic_lecture7/0.PNG"></center>
 
 설치만했을 뿐 사용하겠다는 명령어는 입력하지 않았다.
 
@@ -104,7 +104,7 @@ data(iris)
 ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) + geom_point()
 ```
 
-<center><img src="/assets/Basic_lecture7/1.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/1.png"></center>
 
 `ggplot` 함수 안에서 데이터와 변수를 정의한다. 이 부분은 일종의 백지 위에 그림을 그릴 대상을 정의하는 부분이다. 
 
@@ -117,8 +117,8 @@ sepal + geom_point()
 sepal + geom_line()
 ```
 
-<center><img src="/assets/Basic_lecture7/2.png" width="500" height="400"></center>
-<center><img src="/assets/Basic_lecture7/3.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/2.png"></center>
+<center><img src="/assets/Basic_lecture7/3.png"></center>
 
 ## 2-3. 다양한 데이터 시각화 컴포넌트
 
@@ -129,14 +129,14 @@ sepal + geom_line()
 ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) + geom_point(size = 4)
 ```
 
-<center><img src="/assets/Basic_lecture7/4.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/4.png"></center>
 
 또한 point의 크기를 이용하여 하나의 그래프에서 확인할 수 있는 정보량을 늘려줄 수 있다.
 ```r
 ggplot(iris, aes(Sepal.Length, Sepal.Width)) +  geom_point(aes(size=Petal.Width))
 ```
 
-<center><img src="/assets/Basic_lecture7/5.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/5.png"></center>
 
 `iris`의 종류(Species)별로 다른 색상을 적용해줄 수 있다.
 ```r
@@ -146,8 +146,8 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) + geom_point(size 
 ggplot(iris, aes(Sepal.Length, Sepal.Width)) + geom_point(aes(colour=Species),size = 2)
 ```
 
-<center><img src="/assets/Basic_lecture7/6_1.png" width="500" height="400"></center>
-<center><img src="/assets/Basic_lecture7/6_2.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/6_1.png"></center>
+<center><img src="/assets/Basic_lecture7/6_2.png"></center>
 
 `ggplot`에 넣어도 되고 `geom_point`에 넣어도 상관없어 보이지만 위의 두 케이스는 다르다고 볼 수 있다.
 
@@ -157,7 +157,7 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width)) + geom_point(aes(colour=Species),si
 ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) + geom_point(size = 2) + geom_line()
 ```
 
-<center><img src="/assets/Basic_lecture7/7.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/7.png"></center>
 
 첫번째 식은 `ggplot`내에서 `Species`별로 색상을 다르게 하도록 지정해주었기 때문에 `geom_line()`에서는 각 `Species`별로 선을 그려주었다.
 
@@ -166,7 +166,7 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) + geom_point(size 
 ggplot(iris, aes(Sepal.Length, Sepal.Width)) + geom_point(aes(color=Species), size = 2) + geom_line()
 ```
 
-<center><img src="/assets/Basic_lecture7/8.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/8.png"></center>
 
 그러나 두번째는 `ggplot`내에서 색상을 지정해준게 아니라 `geom_point()`에서 지정해주었기 때문에, `geom_line`을 설정하면 전체 데이터로 선을 그려준다.
 
@@ -191,7 +191,7 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width)) + geom_point(aes(color=Species), si
 ggplot(iris, aes(Species)) + geom_bar(stat = "count")
 ```
 
-<center><img src="/assets/Basic_lecture7/9.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/9.png"></center>
 
 `geop_bar(stat = "count")`를 사용하고 싶다면 y값은 입력해서는 안된다. `geop_bar(stat = "identity")`를 사용하게 되면 `Sepal.Length`값들의 합이 나오게 된다.
 
@@ -199,14 +199,14 @@ ggplot(iris, aes(Species)) + geom_bar(stat = "count")
 ggplot(iris, aes(Species, Sepal.Length)) + geom_bar(stat = "identity")
 ```
 
-<center><img src="/assets/Basic_lecture7/10.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/10.png"></center>
 
 `fill`을 `Species`로 지정했기 때문에 `Species`에 따라 데이터가 다른 색으로 표시된다.
 ```r
 ggplot(iris, aes(x = Species, y = Sepal.Length, fill = Species)) + geom_bar(stat = "identity")
 ```
 
-<center><img src="/assets/Basic_lecture7/11.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/11.png"></center>
 
 `guides(fill=FALSE)`나 `scale_fill_discrete(guide=FALSE)`를 사용하면 오른쪽의 범례를 표시하지 않는다. 
 
@@ -220,11 +220,11 @@ ggplot(iris, aes(x = Species, y = Sepal.Length, fill = Species)) + geom_bar(stat
 ggplot(iris, aes(x = Species, y = Sepal.Length, fill = Species)) + geom_bar(stat = "identity") + theme(legend.position="top")
 ```
 
-<center><img src="/assets/Basic_lecture7/12.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/12.png"></center>
 
-<center><img src="/assets/Basic_lecture7/13.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/13.png"></center>
 
-<center><img src="/assets/Basic_lecture7/14.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/14.png"></center>
 
 또한 y축에 변수 1개의 정보만을 담기보다 여러 변수의 정보를 담아야 할때가 많다. 
 
@@ -241,7 +241,7 @@ dim(new_iris)
 ggplot(new_iris, aes(x = Species, y = value, fill = variable)) + geom_bar(stat = "identity")
 ```
 
-<center><img src="/assets/Basic_lecture7/15.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/15.png"></center>
 
 또한 변수가 합쳐진 그래프가 아니라 따로 떨어진 형태로 만들고 싶을 땐 `position=“dodge”`를 사용한다.
 ```r
@@ -249,7 +249,7 @@ ggplot(new_iris, aes(Species, value, fill = variable)) +
   geom_bar(stat = "identity", position = "dodge")
 ```
 
-<center><img src="/assets/Basic_lecture7/16.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/16.png"></center>
 
 ### 2-3-3. Histogram
 
@@ -269,9 +269,9 @@ h + geom_histogram(color = "black", fill = "steelblue")
 h + geom_histogram(binwidth= 0.5, color = "white", fill = "tomato")
 ```
 
-<center><img src="/assets/Basic_lecture7/17.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/17.png"></center>
 
-<center><img src="/assets/Basic_lecture7/18.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/18.png"></center>
 
 ### 2-3-3. Density plot
 
@@ -280,21 +280,21 @@ Density curve를 그리기 위해서는 `geom_density()`를 이용한다.
 ggplot(iris, aes(x = Sepal.Width)) + geom_density()
 ```
 
-<center><img src="/assets/Basic_lecture7/19.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/19.png"></center>
 
 `fill` 옵션을 통해 내부를 색으로 채우고, `alpha` 옵션은 투명도를 나타낸다.
 ```r
 ggplot(iris, aes(x = Sepal.Width)) + geom_density(fill = "blue", alpha = 0.5)
 ```
 
-<center><img src="/assets/Basic_lecture7/20.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/20.png"></center>
 
 위의 Histogram과 Density plot를 함께 그린 시각화는 아래와 같다.
 ```r
 h + geom_histogram(binwidth=0.2, color = "black", fill = "tomato", aes(y=..density..)) + geom_density(fill = "blue", alpha = 0.3)
 ```
 
-<center><img src="/assets/Basic_lecture7/21.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/21.png"></center>
 
 축의 이름을 설정하는 것은 다음과 같다.
 ```r
@@ -304,9 +304,9 @@ h + geom_histogram(binwidth=0.2, colour = "black", fill = "tomato", aes(y=..dens
 h + geom_histogram(binwidth=0.2, colour = "black", fill = "tomato", aes(y=..density..)) + geom_density(fill = "blue", alpha = 0.3) + labs(x = "Sepal Width", y = "Density", title = "Histogram & Density Curve")
 ```
 
-<center><img src="/assets/Basic_lecture7/22.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/22.png"></center>
 
-<center><img src="/assets/Basic_lecture7/23.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/23.png"></center>
 
 ### 2-3-4. 3차원 그래프
 
@@ -318,7 +318,7 @@ library(plotly)
 plot_ly(data = iris, x = ~Petal.Length, y = ~Petal.Width, z = ~Sepal.Length, type = "scatter3d", mode = "markers", color = ~Species)
 ```
 
-<center><img src="/assets/Basic_lecture7/24.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/24.png"></center>
 
 ### 2-3-5. 좀 더 interactive하게!
 
@@ -330,14 +330,14 @@ p <- ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) + geom_point(
 ggplotly(p)
 ```
 
-<center><img src="/assets/Basic_lecture7/25.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/25.png"></center>
 
 ```r
 q <- ggplot(iris, aes(x = Sepal.Width)) + geom_histogram(colour = "white", fill = "tomato")
 ggplotly(q)
 ```
 
-<center><img src="/assets/Basic_lecture7/26.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture7/26.png"></center>
 
 # 3. Question
 
