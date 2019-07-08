@@ -95,7 +95,7 @@ barplot(freq, main = "막대그래프 색 없음", names.arg = label)
 barplot(freq, main = "막대그래프 색 있음", names.arg = label, col = c(2, 3, 4, 5))
 ```
 
-<center><img src="/assets/Basic_lecture6/3.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/3.png"></center>
 
 ### 1-1-2. Pie plot
 
@@ -112,7 +112,7 @@ pie(freq, main = "Adjusted pie chart", labels = pie.percent, clockwise = T, col 
 legend("topright", legend = label, cex = 0.8, fill = color)
 ```
 
-<center><img src="/assets/Basic_lecture6/4.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/4.png"></center>
 
 ## 1-2. 수치형 자료
 
@@ -140,7 +140,7 @@ y <- sin(x)
 plot(x, y, main = "Scatter plot")
 ```
 
-<center><img src="/assets/Basic_lecture6/5.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/5.png"></center>
 
 다음은 선으로 연결해보자.
 ```r
@@ -156,7 +156,7 @@ grid.val <- sin(grid)
 points(grid, grid.val, col = "blue", lwd = 2, type = "l")
 ```
 
-<center><img src="/assets/Basic_lecture6/6.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/6.png"></center>
 
 ### 1-2-2. Histogram
 
@@ -181,7 +181,7 @@ hist(x, main = "Color histogram", probability = T, breaks = 6)
 points(density(x), col = "red", type = "l", lwd = 2)
 ```
 
-<center><img src="/assets/Basic_lecture6/7.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/7.png"></center>
 
 `density()`함수를 조금 더 자세히 살펴보자.
 ```r
@@ -192,7 +192,7 @@ hist(quakes$mag, main = "지간발생강도의 분포", xlab = "지진강도", y
 points(density(quakes$mag), col = "red", type = "l", lwd = 2)
 ```
 
-<center><img src="/assets/Basic_lecture6/8.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/8.png"></center>
 
 이처럼 히스토그램의 분포를 선으로 나타낼 수 있다.
 
@@ -205,7 +205,7 @@ y <- dnorm(x, mean = 0, sd = 1)
 plot(x, y, main = "Normal distribution", xlab = "x", ylab = "probabilty", type = "l", lwd = 2)
 ```
 
-<center><img src="/assets/Basic_lecture6/9.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/9.png"></center>
 
 ### 1-3-1. Q-Q plot
 
@@ -216,7 +216,7 @@ qqnorm(quakes$mag, main = "Q-Q plot")
 qqline(quakes$mag, lwd = 2)
 ```
 
-<center><img src="/assets/Basic_lecture6/10.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/10.png"></center>
 
 위에서 봤던 그림처럼 이는 정규분포를 따르지 않는다. 이번에는 정규분포가 따르는 데이터를 테스트 해보자.
 ```r
@@ -227,7 +227,7 @@ qqnorm(x, main = "Q-Q plot for normal distribution")
 qqline(x, lwd = 2)
 ```
 
-<center><img src="/assets/Basic_lecture6/11.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/11.png"></center>
 
 정규분포를 따른다는 것을 쉽게 파악할 수 있다.
 
@@ -235,7 +235,7 @@ qqline(x, lwd = 2)
 
 먼저 2차원의 원본데이터(`iris` 데이터)를 살펴보자.
 
-<center><img src="/assets/Basic_lecture6/1.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/1.png"></center>
 
 ```r
 data(iris)
@@ -255,7 +255,7 @@ points(x = data2$Sepal.Length, y = data2$Sepal.Width, col = "blue")
 legend("topleft", legend = c("setosa", "versicolor"), cex = 0.8, col = c("red", "blue"), lwd = 2)
 ```
 
-<center><img src="/assets/Basic_lecture6/12.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/12.png"></center>
 
 그래프는 다음과 같으며 2개의 범주를 잘 나눌 수 있는 직선을 그리는 것은 통계학에서 매우 중요한 문제이다. 
 
@@ -267,7 +267,7 @@ legend("topleft", legend = c("setosa", "versicolor"), cex = 0.8, col = c("red", 
 segments(x0 = 4, y0 = 2, x1 = 7.5, y1 = 5, col = "green", lty = 2, lwd = 2)
 ```
 
-<center><img src="/assets/Basic_lecture6/13.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/13.png"></center>
 
 ### 1-3-3. Box-plot
 
@@ -287,14 +287,14 @@ segments(x0 = 4, y0 = 2, x1 = 7.5, y1 = 5, col = "green", lty = 2, lwd = 2)
 boxplot(iris$Sepal.Length, main = "Sepal length boxplot")
 ```
 
-<center><img src="/assets/Basic_lecture6/14.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/14.png"></center>
 
 다음은 독립변수 ~ 종속변수 형태로 살펴보자.
 ```r
 boxplot(iris$Sepal.Length ~ iris$Species, main = "Sepal length boxplot")
 ```
 
-<center><img src="/assets/Basic_lecture6/15.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/15.png"></center>
 
 # 2. 3차원 그래프
 
@@ -336,7 +336,7 @@ persp(x = x, y = y, z = z, phi = 30, theta = 0, expand = 0.5, main = "phi = 30, 
 persp(x = x, y = y, z = z, phi = 30, theta = 30, expand = 0.5, main = "phi = 30, theta = 30")
 ```
 
-<center><img src="/assets/Basic_lecture6/16.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/16.png"></center>
 
 그러나 위의 3차원 그래프는 원하는 값의 위치를 알기 쉽지는 않다. 
 
@@ -348,10 +348,10 @@ persp(x = x, y = y, z = z, phi = 30, theta = 30, expand = 0.5, main = "phi = 30,
 
 `iris`데이터를 이용해 다음의 그래프 분석을 실시하시오.(`data(iris)`활용)
 
-<center><img src="/assets/Basic_lecture6/17.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/17.png"></center>
 
 ## 3-2. Question
 
 `quakes`데이터를 이용하되 `mag`를 4.5미만, 4.5이상 5미만, 5.0이상으로 분류(범주는 `1`, `2`, `3`)하여 다음의 그래프 분석을 실시하시오.(`data(quakes)`활용)
 
-<center><img src="/assets/Basic_lecture6/18.png" width="500" height="400"></center>
+<center><img src="/assets/Basic_lecture6/18.png"></center>
