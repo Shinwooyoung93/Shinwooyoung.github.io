@@ -118,7 +118,7 @@ output: html_document
 
 주의해야할 점은 일반 텍스트와 소제목의 줄간격을 없이 입력하게 되면 문제가 발생한다
 
-`안녕하세요`
+안녕하세요
 ### 3rd Level Header
 
 따라서 간격을 주어서 입력해야 함을 주의하자.
@@ -158,10 +158,10 @@ output: html_document
 `R-code`를 입력하고 싶다면, 다음의 형식을 사용하여야한다.
 
 ```{r}
-```{r}
-rm(list = ls())
-data(cars)
-summary(cars)
+` ```{r}
+` rm(list = ls())
+` data(cars)
+` summary(cars)
 ` ```
 ```
 
@@ -184,10 +184,10 @@ summary(cars)
 
 그러나 나의 코드를 보여주고 싶지 않을 상황도 존재한다. 그럴 경우에는 다음의 코드를 사용한다.
 ```r
-```{r, echo = F}
-rm(list = ls())
-data(cars)
-summary(cars)
+` ```{r, echo = F}
+` rm(list = ls())
+` data(cars)
+` summary(cars)
 ` ```
 ```
 
@@ -208,8 +208,8 @@ summary(cars)
 그래프를 입력하거나, 외부 사진을 넣는 방법은 아래의 코드를 활용한다.
 
 ```r
-```{r, out.width = '70%', fig.align='center'}
-knitr::include_graphics("iris.png")
+` ```{r, out.width = '70%', fig.align='center'}
+` knitr::include_graphics("iris.png")
 ` ```
 ```
 
@@ -224,8 +224,8 @@ knitr::include_graphics("iris.png")
 또한 `R-code`를 입력하여 그래프를 그릴 수도 있다.
 
 ```r
-```{r, echo=FALSE}
-plot(pressure)
+` ```{r, echo=FALSE}
+` plot(pressure)
 ` ```
 ```
 ```r
@@ -509,9 +509,9 @@ output: html_document
 ```
 
 ```r
-```{r, echo = T, out.width = '70%', fig.align='center'}
-(your script)
-$```$
+` ```{r, echo = T, out.width = '70%', fig.align='center'}
+` (your script)
+` ```
 ```
 
 ### 1. Regression
