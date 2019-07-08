@@ -47,6 +47,12 @@ library(ggplot2)
 ```r
 search()
 ```
+```r
+##  [1] ".GlobalEnv"        "package:ggplot2"   "package:stats"    
+##  [4] "package:graphics"  "package:grDevices" "package:utils"    
+##  [7] "package:datasets"  "package:methods"   "Autoloads"        
+## [10] "package:base"
+```
 
 나머지는 R의 기본 패키지이며 우리가 사용하고 싶지 않은 `package:ggplot2`을 다음과 같이 입력한다.
 ```r
@@ -233,7 +239,21 @@ ggplot(iris, aes(x = Species, y = Sepal.Length, fill = Species)) + geom_bar(stat
 library(reshape)
 new_iris <- melt(iris, id.vars = "Species")
 head(new_iris)
+```
+```r
+##   Species     variable value
+## 1  setosa Sepal.Length   5.1
+## 2  setosa Sepal.Length   4.9
+## 3  setosa Sepal.Length   4.7
+## 4  setosa Sepal.Length   4.6
+## 5  setosa Sepal.Length   5.0
+## 6  setosa Sepal.Length   5.4
+```
+```r
 dim(new_iris)
+```
+```r
+## [1] 600   3
 ```
 
 `melt`는 4개의 변수를 1개의 변수로 만들어주는 역할을 한다. 
