@@ -350,3 +350,5 @@ ggplotly(q)
 ## 3-2. Question
 
 <center><img src="/assets/Basic_lecture7/28.png" width="500" height="400"></center>
+
+<center><img src="/assets/Basic_lecture7/7.html" width="500" height="400"></center>
