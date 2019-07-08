@@ -508,11 +508,11 @@ output: html_document
 ---
 ```
 
-$$
+```r
 ```{r, echo = T, out.width = '70%', fig.align='center'}
 (your script)
+.```
 ```
-$$
 
 ### 1. Regression
 #### 1-1. See mtcars data
