@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Basic Lecture1"
+title:  "Application Lecture1"
 date:   2019-07-08
 use_math: true
 tags:
