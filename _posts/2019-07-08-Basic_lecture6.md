@@ -76,6 +76,11 @@ label<- c("A", "B", "C", "D")
 rbind("범주" = label,
       "빈도" = freq)
 ```
+```r
+##      [,1] [,2] [,3] [,4]
+## 범주 "A"  "B"  "C"  "D" 
+## 빈도 "10" "30" "20" "40"
+```
 
 ### 1-1-1. Bar plot
 
@@ -188,6 +193,17 @@ points(density(x), col = "red", type = "l", lwd = 2)
 par(mfrow = c(1, 1))
 data(quakes) # 지진강도의 데이터 셋 불러오기
 head(quakes)
+```
+```r
+##      lat   long depth mag stations
+## 1 -20.42 181.62   562 4.8       41
+## 2 -20.62 181.03   650 4.2       15
+## 3 -26.00 184.10    42 5.4       43
+## 4 -17.97 181.66   626 4.1       19
+## 5 -20.42 181.96   649 4.0       11
+## 6 -19.68 184.31   195 4.0       12
+```
+```r
 hist(quakes$mag, main = "지간발생강도의 분포", xlab = "지진강도", ylab = "발생건수", freq = F)
 points(density(quakes$mag), col = "red", type = "l", lwd = 2)
 ```
@@ -240,7 +256,20 @@ qqline(x, lwd = 2)
 ```r
 data(iris)
 str(iris)
+```
+```r
+## 'data.frame':    150 obs. of  5 variables:
+##  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+##  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+##  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+##  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+##  $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
+```
+```r
 dim(iris)
+```
+```r
+## [1] 150   5
 ```
 
 `iris` 데이터를 `Species`변수가 `setosa`와 같은 데이터, 다른 데이터 2개로 만들자.
@@ -353,5 +382,11 @@ persp(x = x, y = y, z = z, phi = 30, theta = 30, expand = 0.5, main = "phi = 30,
 ## 3-2. Question
 
 `quakes`데이터를 이용하되 `mag`를 4.5미만, 4.5이상 5미만, 5.0이상으로 분류(범주는 `1`, `2`, `3`)하여 다음의 그래프 분석을 실시하시오.(`data(quakes)`활용)
+
+```r
+## 
+##   1   2   3 
+## 377 425 198
+```
 
 <center><img src="/assets/Basic_lecture6/18.png"></center>
