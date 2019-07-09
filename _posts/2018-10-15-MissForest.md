@@ -590,8 +590,6 @@ EM으로 적합한 결과의 $\gamma$ 값은 매우 높다. 이는 imputation을
 
 우리는 지금까지의 진행과정에서 결측치 추정에 있어 MissForest보다 좋은 추정을 하는 경우는 결측치의 갯수가 작은 경우(n = 50) MICE 외에 존재하지 않았다. MICE의 경우 full multivariate distribution이 존재해야하며, 결측값들은 full distribution을 기반으로하는 conditional distributions에서 추출되어야한다. 그러므로 MICE의 성능이 좋다는 것은 실제로 판단할 수 없으며 여기에서 MissForest는 이점을 가진다. 어떠한 결측치의 형태에 있어 가정을 필요로 하지 않으며 가정을 만족한들, 다른 방식으로 하여금 성능을 보장받을 수 없기 때문이다. 마지막으로 정리하자면 MissForest는 비모수적인 방법으로 MICE와 EM알고리즘에 기반한 결측치 추정방식보다 가정에 대해 자유롭고 성능을 보장받는다. 또한 KNN imputation에 비해 결측값이 적을 때 성능을 보장받지만 결측치의 수가 많아질 수록 성능을 보장받지 못한다. 그러나 dimension이 큰 상황에서 결측치가 들어가 있지 않은 dataset에서 KNN imputation을 쓸 수 없다는 점에서 MissForest방식은 장점을 갖는다고 말할 수 있다.
 
-\newpage
-
 ## Reference
 
 Marvin N.Wright and Andreas Ziegler (2017) **ranger** *A Fast Implementation of Random Forests for High Dimensional Data in C++ and R* . Universitat zu Lubeck
