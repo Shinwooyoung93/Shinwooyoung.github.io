@@ -13,12 +13,12 @@ tags:
 
 ## 1. Intro
 
-결측값을 추정하는 일은 데이터 분석에서 매우 중요한 역할을 한다. 
-가장 단순한 mean imputation부터 많이 쓰이는 MICE (Van Buuren and Oudshoorn, 1999)까지 다양한 추정방법이 존재한다. 
-그러나 categorical data와 continous data가 혼합된 mixed data의 경우, 결측값을 추정하기란 쉬운일이 아니다. 
-Mixed data의 경우 흔히들 MICE를 사용하는데 이 경우 full multivariate distribution이 존재해야하며, 결측값들은 full distribution을 기반으로하는 conditional distributions에서 추출되어야한다. 
-그 정도로 복잡한 가정을 기반으로 하는 반면에, 비모수적인 방법이며 random forest를 기반으로 하는 MissForest는 많은 이점을 지닌다. 
-또한 continous data와 categorical data와 같이 데이터의 유형에서 자유로은 random forest를 기반으로 하므로 MissForest의 결측값 추정방법은 매우 자연스럽다. 
+결측값을 추정하는 일은 데이터 분석에서 매우 중요한 역할을 한다. 가장 단순한 mean imputation부터 많이 쓰이는 MICE (Van Buuren and Oudshoorn, 1999)까지 다양한 추정방법이 존재한다. 그러나 categorical data와 continous data가 혼합된 mixed data의 경우, 결측값을 추정하기란 쉬운일이 아니다. 
+
+
+Mixed data의 경우 흔히들 MICE를 사용하는데 이 경우 full multivariate distribution이 존재해야하며, 결측값들은 full distribution을 기반으로하는 conditional distributions에서 추출되어야한다. 그 정도로 복잡한 가정을 기반으로 하는 반면에, 비모수적인 방법이며 random forest를 기반으로 하는 MissForest는 많은 이점을 지닌다. 또한 continous data와 categorical data와 같이 데이터의 유형에서 자유로은 random forest를 기반으로 하므로 MissForest의 결측값 추정방법은 매우 자연스럽다. 
+
+
 2절에서는 MissForest알고리즘에 대해 설명하고 3절에서는 MissForest의 알고리즘을 설명하기 위해 간단한 R예제를 보이겠으며 4절에서는 MissForest와 MICE의 성능 비교를, 5절에서는 KNN imputation과의 성능 비교를, 6절에서는 EM imputation과 성능 비교를 하면서 마치도록 하겠다.
 
 ## 2. Algorithm for MissForest
@@ -483,7 +483,7 @@ TestMCARNormality(data)
 위의 결측치가 생긴 형태는 전체 관측값들이 적어도 1개의 결측치를 갖고 있을 경우이다. 
 총 결측치의 갯수는 400개 이며, 결측값이 없는 관측치는 존재하지 않는다. 이곳에서 MissForest의 장점이 나타나는데, MissForest는 먼저 mean imputation방법으로 결측치를 채우고 train set을 형성해 추정하는 방식이었다면 KNN imputation은 결측값이 없는 관측값들을 train set으로 형성해 추정한다. 따라서 결측값의 수가 적더라도 관측값이 적어도 1개씩 결측값을 갖고 있다면 이 방법으로 추정하는 것은 불가능하다. 그에 따른 결측치의 수가 많을 때와 적어도 1개의 결측치를 갖는 dataset일 때(n = 100, 200, 400(*))에 대한 결과는 아래의 표와 같다.
 
-### 400(*) : 행이 400이고 랜덤하게 변수 중 1개가 결측인 경우
+#### 400(*) : 행이 400이고 랜덤하게 변수 중 1개가 결측인 경우
 
 |  | |System.time | |$\nabla_N$ |
 |:---|-|:---:|-|:---:|
