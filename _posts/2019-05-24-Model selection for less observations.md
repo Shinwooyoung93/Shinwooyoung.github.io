@@ -361,11 +361,8 @@ $$
 
 Gareth James, Daniela Witten, Trevor Hastie and Rob Tibshirani (2017). **ISLR**: *Data for an Introduction to Statistical Learning with Applications in R*. R package version 1.2. https://CRAN.R-project.org/package=ISLR
 
-Fritsch, Stefan, Frauke Guenther, and Marvin N. Wright. 2019. Neuralnet: Training of Neural Networks.
-https://CRAN.R-project.org/package=neuralnet.
+Fritsch, Stefan, Frauke Guenther, and Marvin N. Wright. 2019. Neuralnet: Training of Neural Networks. https://CRAN.R-project.org/package=neuralnet.
 
-w, Andy, and Matthew Wiener. 2002. “Classification and Regression by randomForest.” R News 2 (3):
-1822. https://CRAN.R-project.org/doc/Rnews/.
+w, Andy, and Matthew Wiener. 2002. “Classification and Regression by randomForest.” R News 2 (3):1822. https://CRAN.R-project.org/doc/Rnews/.
 
-Meyer, David, Evgenia Dimitriadou, Kurt Hornik, Andreas Weingessel, and Friedrich Leisch. 2019. E1071:
-Misc Functions of the Department of Statistics, Probability Theory Group (Formerly: E1071), Tu Wien. https://CRAN.R-project.org/package=e1071.
+Meyer, David, Evgenia Dimitriadou, Kurt Hornik, Andreas Weingessel, and Friedrich Leisch. 2019. E1071:Misc Functions of the Department of Statistics, Probability Theory Group (Formerly: E1071), Tu Wien. https://CRAN.R-project.org/package=e1071.
