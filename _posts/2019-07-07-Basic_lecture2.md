@@ -386,7 +386,7 @@ w[2, 3]
 ## 1-5. R의 수리연산
 
 |Operator||Description|
-|:---:|-|:---:|
+|:---:|-----|:---:|
 |+||addition|
 |-||subtraction|
 |*||multiplication|
