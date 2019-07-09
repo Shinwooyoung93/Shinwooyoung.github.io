@@ -407,7 +407,7 @@ w[2, 3]
 |==||exactly equal to|
 |!=||not equal to|
 |!x||Not x|
-|x`|`y||x OR y|
+|x$\mid$y||x OR y|
 |x&y||x AND y|
 |isTrue(x)||test if X is TRUE|
 
