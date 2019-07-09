@@ -39,9 +39,11 @@ $$
 
 로지스틱 회귀모형이란 DR.Cox(1958)에 의해 개발되었으며 선형모형과 유사하지만 확률의 발생가능성을 예측한다는 점에서 차이가 있다. 
 발생가능성을 예측한다는 점에서 출력변수가 비선형결합으로 이루어져 있는데 이를 수식으로 나타내면 다음과 같다.
+
 $$
 \text{logit}(p) = \log\frac{p}{1 - p} = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_p X_p \quad P(Y = 1|X) = p = \frac{1}{1 + \exp(-X\beta)}
 $$
+
 위의 식을 이용해 발생확률의 기준을 0.5 혹은 다른 확률로 잡고 이보다 크면 1, 작으면 0으로 두고 분류한다.
 
 ### 2-3. Random forest
@@ -70,12 +72,14 @@ $$
 인공신경망은 W.McCulloch, W.Pitts(1943)에 의해 신경망기법이 개발되었으며 F.Rosenblatt(1958)의 퍼셉트론, B.Widrow, T.Hoff(1960)의 Adaline으로 계속 개발되어왔다. 
 Support vector machine과 유사한 점이 굉장히 많으며 여러개의 층을 쌓아서 분류 혹은 회귀를 할 있다는 점에서 장점이 있다.
 이 때 사용하는 비용함수는 다음과 같다.
+
 $$
 \begin{split}
 &\text{minimize}\sum_{i = 1}^n(y_i - g(w^tx_i))^2 \quad \text{in regression, classification}\\
 &\text{minimize}\sum_{i = 1}^ny_i \log(g(w^tx_i)) \quad \text{in classification}
 \end{split}
 $$
+
 중요한 것은 여기에서 가중치 $w$는 역전파(Backpropagation)에 의해 업데이트가 이루어지며 업데이트 과정에서 비용함수의 정보가 들어가기 때문에 역전파로 일컬어진다.
 사용할 R 라이브러리는 `neuralnet`을 사용하겠다.
 
@@ -108,9 +112,11 @@ $$
 #### 3-1-1. Linear regression
 
 시뮬레이션에 사용할 독립변수 $X$는 $U(0, 2)$에서 추출하며 종속변수는
+
 $$
 Y_i = X_i -2 + \epsilon_i, \quad i = 1, 2, \ldots, 200
 $$
+
 이고 $\epsilon_i$는 평균이 0이고 표준편차가 $\sqrt{X_i}$인 정규분포로부터 추출한다. 데이터의 분포는 다음과 같다.
 
 <center><img src="/assets/Multivariate & Data mining - report/1.png"></center>
@@ -138,9 +144,11 @@ $$
 #### 3-1-2. Non-linear regression
 
 시뮬레이션에 사용할 독립변수 $X$는 $U(0, 2)$에서 추출하며 종속변수는
+
 $$
 Y_i = -X_i^3 + 2X_i - 5 + \epsilon_i, \quad i = 1, 2, \ldots, 200
 $$
+
 이고 $\epsilon_i$는 평균이 0이고 표준편차가 $\sqrt{X_i}$인 정규분포로부터 추출한다. 데이터의 분포는 다음과 같다.
 
 <center><img src="/assets/Multivariate & Data mining - report/3.png"></center>
@@ -176,9 +184,11 @@ $$
 #### 3-2-1. Linearly seperable
 
 시뮬레이션에 사용할 독립변수 $X_{200\times 2}$는 $N(0, 1)$에서 추출하며 종속변수는
+
 $$
 Y_i = sign(0.1 + 2X_i + \epsilon_i), \quad i = 1, 2, \ldots 200
 $$
+
 이고 $\epsilon_i$는 평균이 0이고 표준편차가 1인 정규분포로부터 추출한다. 
 
 <center><img src="/assets/Multivariate & Data mining - report/5.png"></center>
@@ -205,9 +215,11 @@ $$
 #### 3-2-2. Non-linearly seperable
 
 시뮬레이션에 사용할 독립변수 $X_{200\times 2}$는 $N(0, 1)$에서 추출하며 종속변수는
+
 $$
 Y_i = sign(\log(X_{i1}^2 + X_{i2}^2)+ \epsilon_i), \quad i = 1, 2, \ldots 200
 $$
+
 이고 $\epsilon_i$는 평균이 0이고 표준편차가 1인 정규분포로부터 추출한다. 
 
 <center><img src="/assets/Multivariate & Data mining - report/7.png"></center>
