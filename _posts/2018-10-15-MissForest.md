@@ -54,10 +54,12 @@ Mixed data의 경우 흔히들 MICE를 사용하는데 이 경우 full multivari
 ### 3) Criterion $\gamma$
 The stopping criterion $\gamma$ is difference for the set of continuous variables.
 
+$$
 \begin{split}
 & \nabla_N = \frac{\sum_{j \in N}(X_{new}^{imp} - X_{old}^{imp})^2}{\sum_{j \in N}(X_{new}^{imp})^2}, \enspace N \: \text{is continuous variables}\\
 & \nabla_F = \frac{\sum_{j \in F}\sum_{i = 1}^{n}X_{new}^{imp} \neq X_{old}^{imp}}{\# NA}, \enspace F \: \text{is categorical variables}
 \end{split}
+$$
 
 In both cases that $\nabla_N$ and $\nabla_F$, good performance leads to a value close to 0, bad performance to a value around 1
 
