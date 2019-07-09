@@ -113,11 +113,11 @@ Y_i = X_i -2 + \epsilon_i, \quad i = 1, 2, \ldots, 200
 $$
 이고 $\epsilon_i$는 평균이 0이고 표준편차가 $\sqrt{X_i}$인 정규분포로부터 추출한다. 데이터의 분포는 다음과 같다.
 
-<center><img src="/assets/Multivariate & Data mining - report/1.eps"></center>
+<center><img src="/assets/Multivariate & Data mining - report/1.png"></center>
 
 시각화를 위해 적합결과를 그래프로 나타내 본다.
 
-<center><img src="/assets/Multivariate & Data mining - report/2.eps"></center>
+<center><img src="/assets/Multivariate & Data mining - report/2.png"></center>
 
 |  || **Linear regression** || **Random forest** | |**Support vector regression** || **Neural network** | 
 |:---|-|:---:|-|:---:|-|:---:|-|:---:|
@@ -132,7 +132,8 @@ $$
 |**Support vector regression**|| 1.124858| | 1.130257 |
 |**Neural network**| |1.116376 || 1.124572 |
 
-네개의 모델링 전부 MSE가 100번과 400번의 차이가 0.01정도 밖에 나지 않기 때문에 분산이 작은 것을 알 수 있다. 또한 위에서 예상한 바와 같이 Random forest는 과적합의 문제가 발생한다는 것 또한 알 수 있다.
+네개의 모델링 전부 MSE가 100번과 400번의 차이가 0.01정도 밖에 나지 않기 때문에 분산이 작은 것을 알 수 있다. 
+또한 위에서 예상한 바와 같이 Random forest는 과적합의 문제가 발생한다는 것 또한 알 수 있다.
 
 #### 3-1-2. Non-linear regression
 
@@ -141,27 +142,25 @@ $$
 Y_i = -X_i^3 + 2X_i - 5 + \epsilon_i, \quad i = 1, 2, \ldots, 200
 $$
 이고 $\epsilon_i$는 평균이 0이고 표준편차가 $\sqrt{X_i}$인 정규분포로부터 추출한다. 데이터의 분포는 다음과 같다.
-```{r, echo=F,out.width="80%", message=FALSE, warning=FALSE,fig.align='center'}
-knitr::include_graphics("3.eps")
-```
+
+<center><img src="/assets/Multivariate & Data mining - report/3.png"></center>
 
 시각화를 위해 적합결과를 그래프로 나타내 본다.
-```{r, echo=F,out.width="80%", message=FALSE, warning=FALSE,fig.align='center'}
-knitr::include_graphics("4.eps")
-```
 
-|  | **Linear regression** | **Random forest** | **Support vector regression** | **Neural network** | 
-|:---|:---:|:---:|:---:|:---:|
-|MSE| 2.021668 | 1.278364 | 1.219632 | 1.016379|
+<center><img src="/assets/Multivariate & Data mining - report/4.png"></center>
+
+|  || **Linear regression** || **Random forest** || **Support vector regression** || **Neural network** | 
+|:---|-|:---:|-|:---:|-|:---:|-|:---:|
+|MSE|| 2.021668 || 1.278364 || 1.219632 || 1.016379|
 
 결과는 위와 같으며 선형회귀분석은 직선의 선으로만 이어진 것과 달리 SVR과 Neural network는 곡선의 형태로 이루어져 있다. 주목할 것은 Random forest인데, 학습데이터 셋의 관측치의 갯수가 20개이므로 과적합되어있음을 알 수 있다. MSE관점에서는 선형으로만 적합되는 선형회귀분석이 가장 좋지 않음을 알 수 있다. 그러나 에러를 바꿔주면서 시뮬레이션을 통해 확인을 해야하므로 100번과 400번의 시뮬레이션을 진행한다.
 
-|**Model**| MSE(100 times simulation) | MSE(400 times simulation) |
-|:---|:---:|:---:|
-|**Linear regression**| 1.984245 | 1.957363 |
-|**Random forest**|1.371279 | 1.378264 |
-|**Support vector regression**| 1.234569 | 1.244264 |
-|**Neural network**| 1.307873 | 1.345574 |
+|**Model**|| MSE(100 times simulation) || MSE(400 times simulation) |
+|:---|-|:---:|-|:---:|
+|**Linear regression**| |1.984245 | |1.957363 |
+|**Random forest**|| 1.371279 | |1.378264 |
+|**Support vector regression**|| 1.234569 || 1.244264 |
+|**Neural network**|| 1.307873 || 1.345574 |
 
 이 표로 미루어 보았을 때, SVR의 성능이 제일 좋음을 알 수 있고 성능이 제일 좋을 것이라 기대했던 Neural network는 SVR보다 낮은 성능을 보이고 100번과 400번의 시뮬레이션의 분산이 큰 것으로 보아 모델 적합에 어려움을 겪을 수 있다고 볼 수 있다.
 
@@ -182,27 +181,24 @@ Y_i = sign(0.1 + 2X_i + \epsilon_i), \quad i = 1, 2, \ldots 200
 $$
 이고 $\epsilon_i$는 평균이 0이고 표준편차가 1인 정규분포로부터 추출한다. 
 
-```{r, echo=F,out.width="80%", message=FALSE, warning=FALSE,fig.align='center'}
-knitr::include_graphics("5.eps")
-```
+<center><img src="/assets/Multivariate & Data mining - report/5.png"></center>
 
 시각화를 위해 적합결과를 그래프로 나타내 본다.
-```{r, echo=F,out.width="80%", message=FALSE, warning=FALSE,fig.align='center'}
-knitr::include_graphics("6.eps")
-```
 
-|  | **Logistic regression** | **Random forest** | **Support vector machine** | **Neural network** | 
-|:---|:---:|:---:|:---:|:---:|
-|Accuracy| 0.85 | 0.7875 | 0.79375 | 0.8 |
+<center><img src="/assets/Multivariate & Data mining - report/6.png"></center>
+
+|  | |**Logistic regression** |  |**Random forest** | | **Support vector machine** | | **Neural network** | 
+|:---|-|:---:|- |:---:|- |:---:|- |:---:|
+|Accuracy| | 0.85 | | 0.7875 | | 0.79375 | | 0.8 |
 
 결과는 위와 같으며 선형으로 분류할 수 있기 때문에 어떤 모델에서도 성능을 보장받을 수 있을 것으로 기대한다. 그러나 Random forest의 경우 학습데이터 셋의 관측치의 갯수가 20개이므로 과적합되어있음을 알 수 있다. 실제 예측 정확도에서도 제일 낮기 때문에 좋은 모델링이 아니라는 것을 알 수 있다. 그러나 에러를 바꿔주면서 시뮬레이션을 통해 확인을 해야하므로 100번과 400번의 시뮬레이션을 진행한다.
 
-|**Model**| Accuracy(100 times simulation) | Accuracy(400 times simulation) |
-|:---|:---:|:---:|
-|**Logistic regression**| 0.8814625 | 0.8784312 |
-|**Random forest**|0.8339 | 0.8323875 |
-|**Support vector machine**| 0.8628125 | 0.8610813 |
-|**Neural network**| 0.8770375 | 0.8734312 |
+|**Model**| | Accuracy(100 times simulation) | | Accuracy(400 times simulation) |
+|:---|- |:---:|- |:---:|
+|**Logistic regression**| | 0.8814625 | | 0.8784312 |
+|**Random forest**| |0.8339 | | 0.8323875 |
+|**Support vector machine**| | 0.8628125 | | 0.8610813 |
+|**Neural network**| | 0.8770375 | | 0.8734312 |
 
 과적합으로 예상했던 Random forest의 예측정확도가 제일 낮기 때문에 좋은 모델링은 아니라는 것을 알 수 있다. 
 
@@ -214,27 +210,26 @@ Y_i = sign(\log(X_{i1}^2 + X_{i2}^2)+ \epsilon_i), \quad i = 1, 2, \ldots 200
 $$
 이고 $\epsilon_i$는 평균이 0이고 표준편차가 1인 정규분포로부터 추출한다. 
 
-```{r, echo=F,out.width="80%", message=FALSE, warning=FALSE,fig.align='center'}
-knitr::include_graphics("7.eps")
-```
+<center><img src="/assets/Multivariate & Data mining - report/7.png"></center>
 
 시각화를 위해 적합결과를 그래프로 나타내 본다.
-```{r, echo=F,out.width="80%", message=FALSE, warning=FALSE,fig.align='center'}
-knitr::include_graphics("8.eps")
-```
 
-|  | **Logistic regression** | **Random forest** | **Support vector machine** | **Neural network** | 
-|:---|:---:|:---:|:---:|:---:|
-|Accuracy| 0.4675 | 0.75625 | 0.78125 | 0.74375 |
+<center><img src="/assets/Multivariate & Data mining - report/8.png"></center>
 
-결과는 위와 같으며, 비선형으로 이루어진 분류문제이기 때문에 로지스틱회귀는 50% 정도의 성능만을 기대할 수 있다. 눈에 띄는 부분은 SVM의 성능이 다른 분류 모델들과 2%의 성능 차이를 갖고 있다. 그러나 에러를 바꿔주면서 시뮬레이션을 통해 확인을 해야하므로 100번과 400번의 시뮬레이션을 진행한다.
+|  | |**Logistic regression** || **Random forest** || **Support vector machine** || **Neural network** | 
+|:---|-|:---:|-|:---:|-|:---:|-|:---:|
+|Accuracy|| 0.4675 || 0.75625 || 0.78125 || 0.74375 |
 
-|**Model**| Accuracy(100 times simulation) | Accuracy(400 times simulation) |
-|:---|:---:|:---:|
-|**Logistic regression**| 0.4949875 | 0.4995812 |
-|**Random forest**| 0.710425 | 0.7095375 |
-|**Support vector machine**| 0.739725 | 0.73875 |
-|**Neural network**| 0.6416250 | 0.6402344 |
+결과는 위와 같으며, 비선형으로 이루어진 분류문제이기 때문에 로지스틱회귀는 50% 정도의 성능만을 기대할 수 있다. 
+눈에 띄는 부분은 SVM의 성능이 다른 분류 모델들과 2%의 성능 차이를 갖고 있다. 
+그러나 에러를 바꿔주면서 시뮬레이션을 통해 확인을 해야하므로 100번과 400번의 시뮬레이션을 진행한다.
+
+|**Model**| |Accuracy(100 times simulation) || Accuracy(400 times simulation) |
+|:---|-|:---:|-|:---:|
+|**Logistic regression**|| 0.4949875 || 0.4995812 |
+|**Random forest**|| 0.710425 || 0.7095375 |
+|**Support vector machine**|| 0.739725 || 0.73875 |
+|**Neural network**|| 0.6416250 || 0.6402344 |
 
 결과는 위의 표와 같고 Random forest와 Neural network가 과적합의 문제가 있을 것으로 기대했기 때문에 성능 또한 보장받지 못했다.
 
@@ -252,99 +247,99 @@ knitr::include_graphics("8.eps")
 
 ### 4-1. Regression
 
-| $Y$ | $X$ | $\beta$ | $\epsilon$ |
-|:-------------------------:|:----------------------------:|:---:|:---:|
-| $X\beta + \epsilon$ | $N(0, 1)$ | $1$ | $N(0, 1)$ |
-| $X\beta + \epsilon$ | $N(0, 1)$ | $1$ | $\chi^2_1$ |
-| $X\beta + \epsilon$ | $V_{ij} = Cov(X)_{ij} = 0.9^{abs(i - j)}$ | $1$ | $N(0, 1)$ |
-| $X\beta + \epsilon$ | $V_{ij} = Cov(X)_{ij} = 0.9^{abs(i - j)}$ | $1$ | $\chi^2_1$ |
-| $\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_{50} x_{50} + \epsilon$ | $MVN(\mu, I), \quad \mu_j \sim \chi^2_j$ | $-1$ | $N(0, 1)$ |
-| $\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_{50} x_{50} + \epsilon$ | $MVN(\mu, I), \quad \mu_j \sim \chi^2_j$ | $-1$ | $\chi^2_1$ |
-| $\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_{50} x_{50} + \epsilon$ | $MVN(\mu, V), \quad \mu_j \sim \chi_j^2$ | $-1$ | $N(0, 1)$ |
-| $\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_{50} x_{50} + \epsilon$ | $MVN(\mu, V), \quad \mu_j \sim \chi_j^2$ | $-1$ | $\chi^2_1$ |
-| $\beta_0 + \beta_1 \exp(x) + \cdots + \beta_{50} \exp(x) + \epsilon$ | $N(1, 2)$ | $(-1)^{j}$ | $N(0, 1)$ |
-| $\beta_0 + \beta_1 \exp(x) + \cdots + \beta_{50} \exp(x) + \epsilon$ | $N(1, 2)$ | $(-1)^{j}$ | $\chi^2_2$ |
-| $\beta_0 + \beta_1 \exp(x) + \cdots + \beta_{50} \exp(x) + \epsilon$ | $V_{ij} = Cov(X)_{ij} = 0.9^{abs(i - j)}$ | $(-1)^{j}$ | $N(0, 1)$ |
-| $\beta_0 + \beta_1 \exp(x) + \cdots + \beta_{50} \exp(x) + \epsilon$ | $V_{ij} = Cov(X)_{ij} = 0.9^{abs(i - j)}$ | $(-1)^{j}$ | $\chi^2_2$ |
-| $\beta_0 + \beta_1 \cos(x) + \cdots + \beta_{50} \sin(x) + \epsilon$ | $N(0, 1)$ | $(-1)^{j}$ | $N(0, 1)$ |
-| $\beta_0 + \beta_1 \cos(x) + \cdots + \beta_{50} \sin(x) + \epsilon$ | $N(0, 1)$ | $(-1)^{j}$ | $\chi^2_1$ |
-| $\beta_0 + \beta_1 \cos(x) + \cdots + \beta_{50} \sin(x) + \epsilon$ | $V_{ij} = Cov(X)_{ij} = 0.9^{abs(i - j)}$ | $(-1)^{j}$ | $N(0, 1)$ |
-| $\beta_0 + \beta_1 \cos(x) + \cdots + \beta_{50} \sin(x) + \epsilon$ | $V_{ij} = Cov(X)_{ij} = 0.9^{abs(i - j)}$ | $(-1)^{j}$ | $\chi^2_1$ |
-| $X\beta + \epsilon$ | $MVN(\mu, I), \quad \mu_j \sim U((-1)^j, 2j)$ | $1$ | $N(0, 1)$ |
-| $X\beta + \epsilon$ | $MVN(\mu, I), \quad \mu_j \sim U((-1)^j, 2j)$ | $1$ | $\chi^2_2$ |
-| $X\beta + \epsilon$ | $MVN(\mu, V), \quad \mu_j \sim U((-1)^j, 2j)$ | $1$ | $N(0, 1)$ |
-| $X\beta + \epsilon$ | $MVN(\mu, V), \quad \mu_j \sim U((-1)^j, 2j)$ | $1$ | $\chi^2_2$ |
+| $Y$ || $X$ || $\beta$ || $\epsilon$ |
+|:-------------------------:|-|:----------------------------:|-|:---:|-|:---:|
+| $X\beta + \epsilon$ || $N(0, 1)$ || $1$ || $N(0, 1)$ |
+| $X\beta + \epsilon$ || $N(0, 1)$ || $1$ || $\chi^2_1$ |
+| $X\beta + \epsilon$ || $V_{ij} = Cov(X)_{ij} = 0.9^{abs(i - j)}$ || $1$ || $N(0, 1)$ |
+| $X\beta + \epsilon$ || $V_{ij} = Cov(X)_{ij} = 0.9^{abs(i - j)}$ || $1$ || $\chi^2_1$ |
+| $\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_{50} x_{50} + \epsilon$ || $MVN(\mu, I), \quad \mu_j \sim \chi^2_j$ || $-1$ || $N(0, 1)$ |
+| $\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_{50} x_{50} + \epsilon$ || $MVN(\mu, I), \quad \mu_j \sim \chi^2_j$ || $-1$ || $\chi^2_1$ |
+| $\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_{50} x_{50} + \epsilon$ || $MVN(\mu, V), \quad \mu_j \sim \chi_j^2$ || $-1$ || $N(0, 1)$ |
+| $\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_{50} x_{50} + \epsilon$ || $MVN(\mu, V), \quad \mu_j \sim \chi_j^2$ || $-1$ || $\chi^2_1$ |
+| $\beta_0 + \beta_1 \exp(x) + \cdots + \beta_{50} \exp(x) + \epsilon$ || $N(1, 2)$ || $(-1)^{j}$ || $N(0, 1)$ |
+| $\beta_0 + \beta_1 \exp(x) + \cdots + \beta_{50} \exp(x) + \epsilon$ || $N(1, 2)$ || $(-1)^{j}$ || $\chi^2_2$ |
+| $\beta_0 + \beta_1 \exp(x) + \cdots + \beta_{50} \exp(x) + \epsilon$ || $V_{ij} = Cov(X)_{ij} = 0.9^{abs(i - j)}$ || $(-1)^{j}$ || $N(0, 1)$ |
+| $\beta_0 + \beta_1 \exp(x) + \cdots + \beta_{50} \exp(x) + \epsilon$ || $V_{ij} = Cov(X)_{ij} = 0.9^{abs(i - j)}$ || $(-1)^{j}$ || $\chi^2_2$ |
+| $\beta_0 + \beta_1 \cos(x) + \cdots + \beta_{50} \sin(x) + \epsilon$ || $N(0, 1)$ || $(-1)^{j}$ || $N(0, 1)$ ||
+| $\beta_0 + \beta_1 \cos(x) + \cdots + \beta_{50} \sin(x) + \epsilon$ || $N(0, 1)$ || $(-1)^{j}$ || $\chi^2_1$ ||
+| $\beta_0 + \beta_1 \cos(x) + \cdots + \beta_{50} \sin(x) + \epsilon$ || $V_{ij} = Cov(X)_{ij} = 0.9^{abs(i - j)}$ || $(-1)^{j}$ || $N(0, 1)$ |
+| $\beta_0 + \beta_1 \cos(x) + \cdots + \beta_{50} \sin(x) + \epsilon$ || $V_{ij} = Cov(X)_{ij} = 0.9^{abs(i - j)}$ || $(-1)^{j}$ || $\chi^2_1$ |
+| $X\beta + \epsilon$ || $MVN(\mu, I), \quad \mu_j \sim U((-1)^j, 2j)$ || $1$ || $N(0, 1)$ |
+| $X\beta + \epsilon$ || $MVN(\mu, I), \quad \mu_j \sim U((-1)^j, 2j)$ || $1$ || $\chi^2_2$ |
+| $X\beta + \epsilon$ || $MVN(\mu, V), \quad \mu_j \sim U((-1)^j, 2j)$ || $1$ || $N(0, 1)$ |
+| $X\beta + \epsilon$ || $MVN(\mu, V), \quad \mu_j \sim U((-1)^j, 2j)$ || $1$ || $\chi^2_2$ |
 
-|**Case**| **Linear regression** | **Random forest** | **Support vector regression** | **Neural network** |
-|:---|:-----------:|:-----------:|:----------------------:|:-----------:|
-|case1|628063(4) | 44.74(2) | 41.03(1) | 54.27(3) |
-|case2|127475(4) | 45.67(2) | 41.92(1) | 54.75(3) |
-|case3|657466(4) | 202.06(3)| 188.79(2)| 115.85(1)|
-|case4|8868125(4)| 205.27(3)| 190.13(2)| 118.90(1)|
-|case5|728069508(4)|2202(2)|1970(1)|2606(3)|
-|case6|36479166(4)|2190(2)|1957(1)|2590(3)|
-|case7|681602(4)|200.53(2)|191.57(1)|785.03(3)|
-|case8|735166(4)|201.25(2)|191.08(1)|792.23(3)|
-|case9|26486065(4)|3844.59(3)|3689.349(1)|3765.20(2)|
-|case10|1112395655(4)|17312(2)|16674(1)|18133(3)|
-|case11|1036249(4)|182.65(2)|175.64(1)|186.62(3)|
-|case12|9862885(4)|170.80(2)|167.44(1)|176.74(3)|
-|case13|218244(4)|14.45(2)|12.96(1)|20.41(3)|
-|case14|31881(4)|15.62(2)|14.11(1)|21.89(3)|
-|case15|122203(4)|24.07(2)|17.73(1)|38.31(3)|
-|case16|4950470853(4)|24.74(2)|18.59(1)|38.61(3)|
-|case17|230566(4)|44.62(2)|41.09(1)|54.78(3)|
-|case18|52377(4)|48.07(2)|44.35(1)|57.93(3)|
-|case19|1834452(4)|200.32(2)|191.18(1)|806.56(3)|
-|case20|594589(4)|201.51(2)|188.25(1)|793.29(3)|
+|**Case**|| **Linear regression** || **Random forest** || **Support vector regression** || **Neural network** |
+|:---|-|:-----------:|-|:-----------:|-|:----------------------:|-|:-----------:|
+|case1||628063(4) || 44.74(2) || 41.03(1) || 54.27(3) |
+|case2||127475(4) || 45.67(2) || 41.92(1) || 54.75(3) |
+|case3||657466(4) || 202.06(3)|| 188.79(2)|| 115.85(1)|
+|case4||8868125(4)|| 205.27(3)|| 190.13(2)|| 118.90(1)|
+|case5||728069508(4)||2202(2)||1970(1)||2606(3)|
+|case6||36479166(4)||2190(2)||1957(1)||2590(3)|
+|case7||681602(4)||200.53(2)||191.57(1)||785.03(3)|
+|case8||735166(4)||201.25(2)||191.08(1)||792.23(3)|
+|case9||26486065(4)||3844.59(3)||3689.349(1)||3765.20(2)|
+|case10||1112395655(4)||17312(2)||16674(1)||18133(3)|
+|case11||1036249(4)||182.65(2)||175.64(1)||186.62(3)|
+|case12||9862885(4)||170.80(2)||167.44(1)||176.74(3)|
+|case13||218244(4)||14.45(2)||12.96(1)||20.41(3)|
+|case14||31881(4)||15.62(2)||14.11(1)||21.89(3)|
+|case15||122203(4)||24.07(2)||17.73(1)||38.31(3)|
+|case16||4950470853(4)||24.74(2)||18.59(1)||38.61(3)|
+|case17||230566(4)||44.62(2)||41.09(1)||54.78(3)|
+|case18||52377(4)||48.07(2)||44.35(1)||57.93(3)|
+|case19||1834452(4)||200.32(2)||191.18(1)||806.56(3)|
+|case20||594589(4)||201.51(2)||188.25(1)||793.29(3)|
 
 ### 4-2. Classification
 
-| $Y$ | $X$ | $\beta$ | $\epsilon$ |
-|:---------------------------:|:--------------------------:|:---:|:---:|
-| $sign(X\beta + \epsilon - \bar{Y})$ | $N(0, 1)$ | $1$ | $N(0, 1)$ |
-| $sign(X\beta + \epsilon - \bar{Y})$ | $N(0, 1)$ | $1$ | $\chi^2_1$ |
-| $sign(X\beta + \epsilon - \bar{Y})$ | $V_{ij} = Cov(X)_{ij} = 0.9^{ij}$ | $1$ | $N(0, 1)$ |
-| $sign(X\beta + \epsilon - \bar{Y})$ | $V_{ij} = Cov(X)_{ij} = 0.9^{ij}$ | $1$ | $\chi^2_1$ |
-| $sign(\beta_0 + \beta_1 x_1 + \cdots + \beta_{50} x_{50} + \epsilon - \bar{Y})$ | $MVN(\mu, I), \quad \mu_j \sim \chi^2_j$ | $-1$ | $N(0, 1)$ |
-| $sign(\beta_0 + \beta_1 x_1 + \cdots + \beta_{50} x_{50} + \epsilon - \bar{Y})$ | $MVN(\mu, I), \quad \mu_j \sim \chi^2_j$ | $-1$ | $\chi^2_1$ |
-| $sign(\beta_0 + \beta_1 x_1 + \cdots + \beta_{50} x_{50} + \epsilon - \bar{Y})$ | $MVN(\mu, V), \quad \mu_j \sim \chi_j^2$ | $-1$ | $N(0, 1)$ |
-| $sign(\beta_0 + \beta_1 x_1 + \cdots + \beta_{50} x_{50} + \epsilon - \bar{Y})$ | $MVN(\mu, V), \quad \mu_j \sim \chi_j^2$ | $-1$ | $\chi^2_1$ |
-| $sign(\beta_0 + \cdots + \beta_{50} \exp(x) + \epsilon -\bar{Y})$ | $N(1, 2)$ | $(-1)^{j}$ | $N(0, 1)$ |
-| $sign(\beta_0 + \cdots + \beta_{50} \exp(x) + \epsilon -\bar{Y})$ | $N(1, 2)$ | $(-1)^{j}$ | $\chi^2_2$ |
-| $sign(\beta_0 + \cdots + \beta_{50} \exp(x) + \epsilon -\bar{Y})$ | $V_{ij} = Cov(X)_{ij} = 0.9^{ij}$ | $(-1)^{j}$ | $N(0, 1)$ |
-| $sign(\beta_0 + \cdots + \beta_{50} \exp(x) + \epsilon -\bar{Y})$ | $V_{ij} = Cov(X)_{ij} = 0.9^{ij}$ | $(-1)^{j}$ | $\chi^2_2$ |
-| $sign(\beta_0 + \cdots + \beta_{50} \sin(x) + \epsilon -\bar{Y})$ | $N(0, 1)$ | $(-1)^{j}$ | $N(0, 1)$ |
-| $sign(\beta_0 + \cdots + \beta_{50} \sin(x) + \epsilon -\bar{Y})$ | $N(0, 1)$ | $(-1)^{j}$ | $\chi^2_1$ |
-| $sign(\beta_0 + \cdots + \beta_{50} \sin(x) + \epsilon -\bar{Y})$ | $V_{ij} = Cov(X)_{ij} = 0.9^{ij}$ | $(-1)^{j}$ | $N(0, 1)$ |
-| $sign(\beta_0 + \cdots + \beta_{50} \sin(x) + \epsilon -\bar{Y})$ | $V_{ij} = Cov(X)_{ij} = 0.9^{ij}$ | $(-1)^{j}$ | $\chi^2_1$ |
-| $sign(X\beta + \epsilon -\bar{Y})$ | $MVN(\mu, I), \quad \mu_j \sim U((-1)^j, 2j)$ | $1$ | $N(0, 1)$ |
-| $sign(X\beta + \epsilon -\bar{Y})$ | $MVN(\mu, I), \quad \mu_j \sim U((-1)^j, 2j)$ | $1$ | $\chi^2_2$ |
-| $sign(X\beta + \epsilon -\bar{Y})$ | $MVN(\mu, V), \quad \mu_j \sim U((-1)^j, 2j)$ | $1$ | $N(0, 1)$ |
-| $sign(X\beta + \epsilon -\bar{Y})$ | $MVN(\mu, V), \quad \mu_j \sim U((-1)^j, 2j)$ | $1$ | $\chi^2_2$ |
+| $Y$ || $X$ || $\beta$ || $\epsilon$ |
+|:---------------------------:|-|:--------------------------:|-|:---:|-|:---:|
+| $sign(X\beta + \epsilon - \bar{Y})$ || $N(0, 1)$ || $1$ || $N(0, 1)$ |
+| $sign(X\beta + \epsilon - \bar{Y})$ || $N(0, 1)$ || $1$ || $\chi^2_1$ |
+| $sign(X\beta + \epsilon - \bar{Y})$ || $V_{ij} = Cov(X)_{ij} = 0.9^{ij}$ || $1$ || $N(0, 1)$ |
+| $sign(X\beta + \epsilon - \bar{Y})$ || $V_{ij} = Cov(X)_{ij} = 0.9^{ij}$ || $1$ || $\chi^2_1$ |
+| $sign(\beta_0 + \beta_1 x_1 + \cdots + \beta_{50} x_{50} + \epsilon - \bar{Y})$ || $MVN(\mu, I), \quad \mu_j \sim \chi^2_j$ || $-1$ || $N(0, 1)$ |
+| $sign(\beta_0 + \beta_1 x_1 + \cdots + \beta_{50} x_{50} + \epsilon - \bar{Y})$ || $MVN(\mu, I), \quad \mu_j \sim \chi^2_j$ || $-1$ || $\chi^2_1$ |
+| $sign(\beta_0 + \beta_1 x_1 + \cdots + \beta_{50} x_{50} + \epsilon - \bar{Y})$ || $MVN(\mu, V), \quad \mu_j \sim \chi_j^2$ || $-1$ || $N(0, 1)$ |
+| $sign(\beta_0 + \beta_1 x_1 + \cdots + \beta_{50} x_{50} + \epsilon - \bar{Y})$ || $MVN(\mu, V), \quad \mu_j \sim \chi_j^2$ || $-1$ || $\chi^2_1$ |
+| $sign(\beta_0 + \cdots + \beta_{50} \exp(x) + \epsilon -\bar{Y})$ || $N(1, 2)$ || $(-1)^{j}$ || $N(0, 1)$ |
+| $sign(\beta_0 + \cdots + \beta_{50} \exp(x) + \epsilon -\bar{Y})$ || $N(1, 2)$ || $(-1)^{j}$ || $\chi^2_2$ |
+| $sign(\beta_0 + \cdots + \beta_{50} \exp(x) + \epsilon -\bar{Y})$ || $V_{ij} = Cov(X)_{ij} = 0.9^{ij}$ || $(-1)^{j}$ || $N(0, 1)$ |
+| $sign(\beta_0 + \cdots + \beta_{50} \exp(x) + \epsilon -\bar{Y})$ || $V_{ij} = Cov(X)_{ij} = 0.9^{ij}$ || $(-1)^{j}$ || $\chi^2_2$ |
+| $sign(\beta_0 + \cdots + \beta_{50} \sin(x) + \epsilon -\bar{Y})$ || $N(0, 1)$ || $(-1)^{j}$ || $N(0, 1)$ |
+| $sign(\beta_0 + \cdots + \beta_{50} \sin(x) + \epsilon -\bar{Y})$ || $N(0, 1)$ || $(-1)^{j}$ || $\chi^2_1$ |
+| $sign(\beta_0 + \cdots + \beta_{50} \sin(x) + \epsilon -\bar{Y})$ || $V_{ij} = Cov(X)_{ij} = 0.9^{ij}$ || $(-1)^{j}$ || $N(0, 1)$ |
+| $sign(\beta_0 + \cdots + \beta_{50} \sin(x) + \epsilon -\bar{Y})$ || $V_{ij} = Cov(X)_{ij} = 0.9^{ij}$ || $(-1)^{j}$ || $\chi^2_1$ |
+| $sign(X\beta + \epsilon -\bar{Y})$ || $MVN(\mu, I), \quad \mu_j \sim U((-1)^j, 2j)$ || $1$ || $N(0, 1)$ |
+| $sign(X\beta + \epsilon -\bar{Y})$ || $MVN(\mu, I), \quad \mu_j \sim U((-1)^j, 2j)$ || $1$ || $\chi^2_2$ |
+| $sign(X\beta + \epsilon -\bar{Y})$ || $MVN(\mu, V), \quad \mu_j \sim U((-1)^j, 2j)$ || $1$ || $N(0, 1)$ |
+| $sign(X\beta + \epsilon -\bar{Y})$ || $MVN(\mu, V), \quad \mu_j \sim U((-1)^j, 2j)$ || $1$ || $\chi^2_2$ |
 
-|**Case**| **Logistic regression** | **Random forest** | **Support vector machine** | **Neural network** |
-|:---|:------------:|:------------:|:-------------------:|:------------:|
-|case1|0.533(3)|0.614(2)|0.621(1)|0.499(4)|
-|case2|0.530(4)|0.618(2)|0.626(1)|0.505(3)|
-|case3|0.549(4)|0.863(2)|0.912(1)|0.565(3)|
-|case4|0.549(3)|0.861(2)|0.911(1)|0.545(4)|
-|case5|0.519(4)|0.611(2)|0.630(1)|0.498(4)|
-|case6|0.524(3)|0.610(2)|0.624(1)|0.496(4)|
-|case7|0.543(3)|0.863(2)|0.912(1)|0.497(4)|
-|case8|0.549(3)|0.866(2)|0.913(1)|0.500(4)|
-|case9|0.537(3)|0.580(2)|0.600(1)|0.525(4)|
-|case10|0.527(4)|0.558(2)|0.570(1)|0.547(3)|
-|case11|0.520(3)|0.528(1)|0.527(2)|0.503(4)|
-|case12|0.527(4)|0.571(2)|0.585(1)|0.546(3)|
-|case13|0.533(3)|0.612(2)|0.625(1)|0.501(4)|
-|case14|0.534(3)|0.623(2)|0.636(1)|0.513(4)|
-|case15|0.546(3)|0.816(1)|0.807(2)|0.506(4)|
-|case16|0.541(3)|0.815(1)|0.810(2)|0.512(4)|
-|case17|0.533(3)|0.611(2)|0.616(1)|0.499(4)|
-|case18|0.531(3)|0.635(1)|0.634(2)|0.521(4)|
-|case19|0.549(3)|0.864(2)|0.911(1)|0.497(4)|
-|case20|0.549(3)|0.861(2)|0.906(1)|0.499(4)|
+|**Case**|| **Logistic regression** || **Random forest** || **Support vector machine** || **Neural network** |
+|:---|-|:------------:|-|:------------:|-|:-------------------:|-|:------------:|
+|case1||0.533(3)||0.614(2)||0.621(1)||0.499(4)|
+|case2||0.530(4)||0.618(2)||0.626(1)||0.505(3)|
+|case3||0.549(4)||0.863(2)||0.912(1)||0.565(3)|
+|case4||0.549(3)||0.861(2)||0.911(1)||0.545(4)|
+|case5||0.519(4)||0.611(2)||0.630(1)||0.498(4)|
+|case6||0.524(3)||0.610(2)||0.624(1)||0.496(4)|
+|case7||0.543(3)||0.863(2)||0.912(1)||0.497(4)|
+|case8||0.549(3)||0.866(2)||0.913(1)||0.500(4)|
+|case9||0.537(3)||0.580(2)||0.600(1)||0.525(4)|
+|case10||0.527(4)||0.558(2)||0.570(1)||0.547(3)|
+|case11||0.520(3)||0.528(1)||0.527(2)||0.503(4)|
+|case12||0.527(4)||0.571(2)||0.585(1)||0.546(3)|
+|case13||0.533(3)||0.612(2)||0.625(1)||0.501(4)|
+|case14||0.534(3)||0.623(2)||0.636(1)||0.513(4)|
+|case15||0.546(3)||0.816(1)||0.807(2)||0.506(4)|
+|case16||0.541(3)||0.815(1)||0.810(2)||0.512(4)|
+|case17||0.533(3)||0.611(2)||0.616(1)||0.499(4)|
+|case18||0.531(3)||0.635(1)||0.634(2)||0.521(4)|
+|case19||0.549(3)||0.864(2)||0.911(1)||0.497(4)|
+|case20||0.549(3)||0.861(2)||0.906(1)||0.499(4)|
 
 ## 5. Conclusion
 
@@ -353,3 +348,12 @@ knitr::include_graphics("8.eps")
 ## Reference
 
 Gareth James, Daniela Witten, Trevor Hastie and Rob Tibshirani (2017). **ISLR**: *Data for an Introduction to Statistical Learning with Applications in R*. R package version 1.2. https://CRAN.R-project.org/package=ISLR
+
+Fritsch, Stefan, Frauke Guenther, and Marvin N. Wright. 2019. Neuralnet: Training of Neural Networks.
+https://CRAN.R-project.org/package=neuralnet.
+
+w, Andy, and Matthew Wiener. 2002. “Classification and Regression by randomForest.” R News 2 (3):
+1822. https://CRAN.R-project.org/doc/Rnews/.
+
+Meyer, David, Evgenia Dimitriadou, Kurt Hornik, Andreas Weingessel, and Friedrich Leisch. 2019. E1071:
+Misc Functions of the Department of Statistics, Probability Theory Group (Formerly: E1071), Tu Wien. https://CRAN.R-project.org/package=e1071.
