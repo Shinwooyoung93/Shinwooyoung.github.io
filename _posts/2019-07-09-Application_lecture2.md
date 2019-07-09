@@ -150,15 +150,15 @@ crime <- read.csv(file.choose())
 
 데이터의 구조는 다음과 같이 이루어져 있다.
 
-|Variable|Type|Summary|
-|:---:|:---:|:---:|
-|Category|Factor|범죄 종류|
-|DayOfWeek|Factor|범죄 발생 요일|
-|PdDistrict|Factor|경찰서 이름|
-|X|Numeric|경도|
-|Y|Numeric|위도|
-|dist|Numeric|사건지점으로부터 경찰서 거리|
-|time|Factor|사건해결까지 소요시간|
+|Variable||Type||Summary|
+|:---:|-|:---:|-|:---:|
+|Category||Factor||범죄 종류|
+|DayOfWeek||Factor||범죄 발생 요일|
+|PdDistrict||Factor||경찰서 이름|
+|X||Numeric||경도|
+|Y||Numeric||위도|
+|dist||Numeric||사건지점으로부터 경찰서 거리|
+|time||Factor||사건해결까지 소요시간|
 
 ```r
 summary(crime)
