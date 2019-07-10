@@ -49,7 +49,8 @@ In next chapter, we see the estimation methods like MLE, LSE, and Yule-Walker es
 AR(p) model depend on previous times like $f(X_0, \ldots, X_i) = f(X_0)f(X_1|X_0)\cdots f(X_n|X_{n - 1}, \ldots, X_0)$ 
 then, AR(1) model only depend on previous time point. 
 
-Thus AR(1) model's likelihood function is $f(X_0, \ldots, X_i) = f(X_0)f(X_1|X_0)\ldots f(X_n|X_{n - 1})$ and $X_t = c + \rho X_{t - 1} + e_t$.
+Thus AR(1) model's likelihood function is $f(X_0, \ldots, X_i) = f(X_0)f(X_1|X_0)\ldots f(X_n|X_{n - 1})$ 
+and $X_t = c + \rho X_{t - 1} + e_t$.
 
 Then we can easily know that $E(X_t) = \mu = c/(1 - \rho)$.
 
