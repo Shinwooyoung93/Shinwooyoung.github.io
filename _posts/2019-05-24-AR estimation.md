@@ -9,7 +9,7 @@ tags:
  - Report
 ---
 
-# AR(1) model estimation with quantile loss
+# AR(1) estimation with quantile loss
 
 ## Abstract
 
@@ -29,7 +29,7 @@ $$
 X_t = \rho_1 X_{t - 1} + \rho_2 X_{t - 2} + \cdots + \rho_p X_{t - p} + e_t, \quad e_t \sim N(0, \sigma^2)
 $$
 
-![**Figure 1.** Example of AR(1)](/assets/Statistical Signal Processing/0.png)
+![Figure 1. Example of AR(1)](/assets/Statistical Signal Processing/0.png)
 
 Also it need some assumptions
 
