@@ -440,6 +440,7 @@ Q(\rho, \mu, \tau) &= \sum_{t = 1}^p \rho_{\tau}(X_t - \mu - \rho(X_{t - 1} - \m
 &= \sum_{t = 1}^p \rho_{\tau}(X_t - q)\\
 &= \left[(\tau - 1)\sum_{X_t < q}(X_t - q)+ \tau\sum_{X_t \ge q}(X_t - q)\right]
 \end{split}
+$$
 
 When we use quantile $\tau = 0.5$, as called median regression
 
@@ -540,7 +541,6 @@ plot(density(sigma.matrix), col = 2, lwd = 2, ylim = c(0, 11), main = "sigma qua
 |**True**||2||0.2||1.414214|
 |**Check loss**||1.961759||0.1801444|| 0.7502005|
 |||(0.0703)||(0.0235)||(0.00144)|
-$$
 
 When using check loss, rho made better estimates than the above three methods. 
 However, the estimates of mu and sigma came with very bad results. 
