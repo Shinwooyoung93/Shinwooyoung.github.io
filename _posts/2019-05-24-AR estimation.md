@@ -537,7 +537,7 @@ plot(density(sigma.matrix), col = 2, lwd = 2, ylim = c(0, 11), main = "sigma qua
 ![Figure5. Check loss estimation](/assets/Statistical Signal Processing/4.png)
 
 |**Model**||$\hat{\mu}$||$\hat{\rho}$||$\hat{\sigma}$|
-|:-------:||:---------:||:----------:||:------------:|
+|:-------:|-|:---------:|-|:----------:|-|:------------:|
 |**True**||2||0.2||1.414214|
 |**Check loss**||1.961759||0.1801444|| 0.7502005|
 |||(0.0703)||(0.0235)||(0.00144)|
