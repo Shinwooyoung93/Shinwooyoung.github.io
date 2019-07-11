@@ -595,7 +595,7 @@ w.p.value
 
 Daniel J.Stekhoven and Peter Buhlmann (2011) **MissForest** : *non-parametric missing value imputation for mixed-type data*. Department of Mathematics, ETH Zurich
 
-Fernando Bacao, Victor Lobo, and Marco Painho (2005) *Self-organizing Maps as Substitutes for K-Means Clustering, ICCS 2005, LNCS 3516, pp. 476 ???483, 2005.*
+Fernando Bacao, Victor Lobo, and Marco Painho (2005) *Self-organizing Maps as Substitutes for K-Means Clustering, ICCS 2005, LNCS 3516, pp. 476 ~ 483, 2005.*
 
 Marvin N.Wright and Andreas Ziegler (2017) **ranger** *A Fast Implementation of Random Forests for High Dimensional Data in C++ and R* . Universitat zu Lubeck
 
