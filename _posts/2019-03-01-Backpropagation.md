@@ -234,48 +234,48 @@ for i in range(10000):
     NN.train(X, t)
 ```
 ```python
-#predicted output: [[0.54045105 0.54034353 0.54042039]]
-#loss: 0.12617687296377364
+# predicted output: [[0.54045105 0.54034353 0.54042039]]
+# loss: 0.12617687296377364
 
 
-#predicted output: [[0.5570245  0.55687276 0.55698123]]
-#loss: 0.1150369188377854
+# predicted output: [[0.5570245  0.55687276 0.55698123]]
+# loss: 0.1150369188377854
 
 
-#predicted output: [[0.72266845 0.72262319 0.72265611]]
-#loss: 0.0337720657418149
+# predicted output: [[0.72266845 0.72262319 0.72265611]]
+# loss: 0.0337720657418149
 
 
-#predicted output: [[0.73006422 0.73006664 0.73006488]]
-#loss: 0.03142134754185451
+# predicted output: [[0.73006422 0.73006664 0.73006488]]
+# loss: 0.03142134754185451
 
 
-#predicted output: [[0.73105931 0.73105979 0.73105944]]
-#loss: 0.031114001170512426
+# predicted output: [[0.73105931 0.73105979 0.73105944]]
+# loss: 0.031114001170512426
 
 
-#predicted output: [[0.73106591 0.73106592 0.73106591]]
-#loss: 0.031112000677230422
+# predicted output: [[0.73106591 0.73106592 0.73106591]]
+# loss: 0.031112000677230422
 
 
-#predicted output: [[0.73105902 0.73105902 0.73105902]]
-#loss: 0.03111412332216862
+# predicted output: [[0.73105902 0.73105902 0.73105902]]
+# loss: 0.03111412332216862
 
 
-#predicted output: [[0.73105855 0.73105855 0.73105855]]
-#loss: 0.03111426688467415
+# predicted output: [[0.73105855 0.73105855 0.73105855]]
+# loss: 0.03111426688467415
 
 
-#predicted output: [[0.73105857 0.73105857 0.73105857]]
-#loss: 0.031114259987152403
+# predicted output: [[0.73105857 0.73105857 0.73105857]]
+# loss: 0.031114259987152403
 
 
-#predicted output: [[0.73105858 0.73105858 0.73105858]]
-#loss: 0.031114258512887197
+# predicted output: [[0.73105858 0.73105858 0.73105858]]
+# loss: 0.031114258512887197
 
 
-#predicted output: [[0.73105858 0.73105858 0.73105858]]
-#loss: 0.03111425847414064
+# predicted output: [[0.73105858 0.73105858 0.73105858]]
+# loss: 0.03111425847414064
 ```
 
 We have previously seen that the back-propagation, and the reason why we continually update the error by propagating it backwards is because the error affects the weight adjustment to give better results through the neural network. However, the more complicated the structure, the more efficient it is. The gradient descent method is a method designed to do this efficiently because it takes a long time to calculate all the weight combinations in the neural network.
