@@ -204,6 +204,13 @@ for _ in range(5000):
 # step:500,loss:4.368691,mse:0.000001
 # step:1000,loss:1.665577,mse:0.000001
 # step:1500,loss:0.576825,mse:0.000001
+# step:2000,loss:0.174353,mse:0.000001
+# step:2500,loss:0.044392,mse:0.000001
+# step:3000,loss:0.009535,mse:0.000001
+# step:3500,loss:0.001956,mse:0.000001
+# step:4000,loss:0.000487,mse:0.000001
+# step:4500,loss:0.000148,mse:0.000001
+# step:5000,loss:0.000046,mse:0.000001
 ```
 
 # Validation
