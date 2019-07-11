@@ -203,6 +203,7 @@ for _ in range(5000):
 # step:1,loss:11.762371,mse:0.938995
 # step:500,loss:4.368691,mse:0.000001
 # step:1000,loss:1.665577,mse:0.000001
+# step:1500,loss:0.576825,mse:0.000001
 ```
 
 # Validation
