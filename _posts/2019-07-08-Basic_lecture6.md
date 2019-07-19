@@ -139,7 +139,7 @@ legend("topright", legend = label, cex = 0.8, fill = color)
 
 따라서 항상 초기화해주는 습관이 중요하다.
 ```r
-par(new = FALSE)
+par(mfrow = c(1, 1))
 x <- c(0, -2, -1, 1, 2, 3, 4)
 y <- sin(x)
 plot(x, y, main = "Scatter plot")
