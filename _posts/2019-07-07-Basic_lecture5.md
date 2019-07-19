@@ -264,10 +264,10 @@ y$min
 
 조금 더 확장해서 거리를 알려주는 함수를 만들어보자. 거리 함수는 다음의 공식을 사용한다.
 $$
-d_p(x, y) = \sqrt[p]{\sum_i^n(x_i - y_i)^p}
+d_p(x, y) = \sqrt[p]{\sum_i^n|x_i - y_i|^p}
 $$
 
-이고 $p = 1$이면 $|\sum_i(x_i - y_i)|$. $p = 2$이면 유클리디언거리 $\sqrt{\sum_i(x_i - y_i)^2}$이다. 여기에서 사용되는 변수는 총 3개이다. `x, y, p`
+이고 $p = 1$이면 $\sum_i|x_i - y_i|$. $p = 2$이면 유클리디언거리 $\sqrt{\sum_i|x_i - y_i|^2}$이다. 여기에서 사용되는 변수는 총 3개이다. `x, y, p`
 ```r
 dist.function <- function(x, y, p = 2){
   dist <- (sum((x - y)^p))^{1/p}
